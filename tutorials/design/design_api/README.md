@@ -30,8 +30,8 @@ The Apiary design editor provides a rich experience for designing, collaborating
   * [Apiary Editor](https://help.apiary.io/tools/apiary-editor/)
   * [Interactive Documentation](https://help.apiary.io/tools/interactive-documentation/)
 
-## Use the Mock Server to test your design
-When you create your design in Apiary, you get interactive documentation automatically generated, but there is also a mock server that is created for you!
+## Use the Mock Server to prototype your design
+When you create your design in Apiary, you get interactive documentation automatically generated, but there is also a mock server that is created for you!  The mock server helps you to prototype your design by a working end-point that you can use.
 > Reminder: Make sure you have saved your design
 
 Every time you click *Save*, Apiary generates a mock-server based on your design.  Using your interactive documentation, you can now test the design.
