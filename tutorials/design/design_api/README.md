@@ -1,4 +1,4 @@
-# Design an API
+# Designing an API
 Using Oracle Apiary which is a part of Oracle API Platform Cloud Service, you can design an API using either API Blueprint or Swagger/OpenAPI.  This tutorial walks through the design process and also provides a pre-created API Blueprint to accelerate the creation of the serviceTickets API.   
 
 ## Before you begin
@@ -8,7 +8,7 @@ You need to have an account on Apiary.  You can sign up for a free developer acc
 
 ## Creating the API
 ### Log into Apiary
-Point your browser to http://apiary.io and sign in.  You may see the sample API created when you signed up.
+Point your browser to http://apiary.io and sign in.  You may see the sample API that was created when you signed up.
 ### Create a new API Project
 Click on the project name in the upper-left side and select *Create New API Project*
 ### Name your new API Project
@@ -19,7 +19,7 @@ You can call the API _ticketService_ to follow along with the demo scenario, but
 
   You will find that the API was created with the "Polls" API created as a template.  This is just to provide you with guidance to help jump-start your work.
   
-> Use the [ticketService API Blueprint'](./ticketService.apib) as your reference.  Rather than type everything by hand, you can open it in an editor, copy it and past it over the "Polls" sample in the Apiary editor
+> Use the [ticketService API Blueprint](./ticketService.apib) as your reference.  Rather than type everything by hand, you can open it in an editor, copy it and past it over the "Polls" sample in the Apiary editor
 
 This tutorial will not walk through each step of the API Blueprint, but take some time to compare the API Blueprint on the left-hand side with the automatically generated documentation on the right.  You can try changing some of the blueprint to see the changes reflected on the right.
 
