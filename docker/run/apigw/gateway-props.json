@@ -1,0 +1,12 @@
+{
+   "gatewayInstallDir" : "/home/oracle/apigw",
+   "adminName"         : "weblogic",
+   "adminPassword"     : "welcome1",
+   "gatewayName"       : "DevelopmentGateway",
+   "gatewayNodeName"   : "DockerGateway1",
+   "gatewayPort"       : "8001",
+   "managementServerHost"    : "slc06mxc.us.oracle.com",
+   "managementServerPort"    : "7201",
+   "managementServerUser"    : "api-gateway-user",
+   "managementServerPassword" : "welcome1"
+}

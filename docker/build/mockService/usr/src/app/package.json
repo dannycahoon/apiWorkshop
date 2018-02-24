@@ -1,0 +1,8 @@
+{
+  "name": "mockService",
+  "main": "mockService.js",
+  "dependencies" : {
+    "express": "~4.0.0",
+    "body-parser": "~1.15.1"
+  }
+}

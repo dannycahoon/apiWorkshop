@@ -1,0 +1,17 @@
+{
+  "name": "game-service",
+  "version": "0.1.0",
+  "description": "Game Seat and Beers Service",
+  "main": "server.js",
+  "scripts": {
+    "prepublish": "zip -r game-service.zip manifest.json *.js *.json node_modules"
+  },
+  "author": "shaun.smith@oracle.com",
+  "dependencies": {
+    "express": "~4.5.1",
+    "logfmt": "~1.2.0"
+  },
+  "engines": {
+    "node": "6.x"
+  }
+}
