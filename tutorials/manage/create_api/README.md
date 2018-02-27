@@ -9,7 +9,7 @@ This is often referred to as "Creating an API", however there are many component
 ### Log into API Platform Cloud Service
 1. Point your browser to the management portal URL. 
 
-> This URL is based on the [environment](../../../environments/README.md) that you have selected but it will take the form of http(s)://<host>:<port>/apiplatform
+> This URL is based on the [environment](../../../environments/README.md) that you have selected but it will take the form of `http(s)://<host>:<port>/apiplatform`
 
 1.  Log in as a user that has the *API Manager* role.  
 
