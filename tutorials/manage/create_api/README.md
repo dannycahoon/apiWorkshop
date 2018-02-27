@@ -22,7 +22,7 @@ This is often referred to as "Creating an API", however there are many component
  
 > If you are using a shared environment, your API may already be created.  You can elect to modify the name such as add your initials so you know which API is yours
 
-1. Once your API is created, you will see it in the list of APIs.  Go ahead and click on the API name to continue editing it.
+Once your API is created, you will see it in the list of APIs.  Go ahead and click on the API name to continue editing it.
 
 #### Select the specification (optional)
 On the API Specification tab (left-hand side), you can choose your API design that you created in Apiary during the [Designing an API](../../design/design_api) lab.  
@@ -40,7 +40,7 @@ The API request is the endpoint to which requests for your API are sent.  The fu
 	
 where:
   - http is the protocol over which the gateway receives requests
-  - <host>:<port> is the hostname and port of the gateway instance this API is deployed to
+  - `<host>:<port>` is the hostname and port of the gateway instance this API is deployed to
   - ticketService/1 is the API endpoint you chose (currently this is hard-coded as /the API name/its version).  
   - /tickets is considered the private resource path of the API. Anything beyond the API endpoint is passed to the back-end service.
 
@@ -71,4 +71,4 @@ In this tutorial you learned the following:
   * How to create an API in API Platform Cloud Service
 
 #### Next Steps
- - [Deploying an API](../deploy_api)# Deploying an API
+ - [Deploying an API](../deploy_api)
