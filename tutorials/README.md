@@ -14,4 +14,4 @@ Tutorial | Skill Level | Focus Area
 [Design an API](./design/design_api) | Learner | [Design](./tutorials/design) 
 [Create an API Policy Implementation](./manage/apis/create_api) | Learner | [Manage](./tutorials/manage)
 [Deploy an API](./manage/apis/deploy_api) | Learner | [Manage](./tutorials/manage)
-[Grant Access to a Gateway](./manage/gateways/grants) | Learner [Manage](./tutorials/manage)
+[Grant Access to a Gateway](./manage/gateways/grants) | Learner | [Manage](./tutorials/manage)
