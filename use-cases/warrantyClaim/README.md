@@ -11,7 +11,7 @@ Here are some of the current pain-points:
 
 Here are some of the solutions
 - Use a modern service ticketing system.  
-  -NexGen chose and implemented Oracle Service Cloud.  This makes it easier for all of NexGen sales and service employees to take care of the customer
+  - NexGen chose and implemented Oracle Service Cloud.  This makes it easier for all of NexGen sales and service employees to take care of the customer
 - Create a modern web interface for customers to be able to submit warranty claims.  This interface should be part of a process management system that has the ability to connect to various legacy back-end systems as well as SaaS applications.  
   - NexGen chose and implemented Oracle Integration Cloud.  This eliminates many manual, error-prone steps as well as provides great flexibility for the future
 -  Enter into a series of partnerships with service firms who can take care of repairs for certain product lines.  These partners are expected to represent NexGen by completing the repair and updating ticket statuses as if the product were repaired or replaced directly by NexGen
@@ -30,7 +30,7 @@ This use-case is the Warranty Claim that is used across Integration, Process and
   1. Link the API with the Integration Service
 
 This series of learning paths and tutorials will primarily leverage the *API* portion of this scenario but to "see the big picture" here is an overview diagram of the use-case
-[](TicketService.png)
+[](./TicketService.png)
 
 ## Implementing the Warranty Claim Ticket Service API
 Now that you understand NexGen's use-case above, here is the project requirements below that you received from your project manager.  
