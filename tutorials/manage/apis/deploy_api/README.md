@@ -74,9 +74,8 @@ Choose your favorite REST client.  For this exercise, you could simply use a web
 
 
 Because you have not applied any policies, the request is passed to the backend service without further validation.  This is simply the “proxy pattern”. You should have received a response similar to the following. 
-
-'''
-        {
+```
+           {
               "_items": [
                 {
                   "customer": "ACME Corp",
@@ -180,7 +179,7 @@ Because you have not applied any policies, the request is passed to the backend 
               "page": 1
              }
             }
- '''
+```
 ## Conclusion
 In this tutorial you learned how to:
 
