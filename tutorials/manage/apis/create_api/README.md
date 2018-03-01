@@ -63,12 +63,23 @@ To configure the service request:
   1. Enter the Apiary Mock Service URL from [Designing an API](../../design/design_api) in the back-end Service URL field.
   1. Remove the “/tickets” from the mock-service URL so the API can be designed to call multiple end-points such as “/incidents”
 1. Leave the Service Account as None
+1. If your gateway is behind your corporate firewall, then you will need to make sure that the *Use Gateway Node Proxy* is checked.
 1. Click Apply.
 1. Click Save Changes.
+
+## Understanding the Request and Response Flow
+In this lab, you simply configured the request flow.  In the policy definition, you will see *Request* and *Response* head tabs.
+
+Click the Response tab to view a top-down visual representation of the response flow. You will notice the available policies change as well.  The Service and API Response entries cannot be edited.
+
+In the response flow, the service response happens first. The response from the back-end service is always the first entry in the outbound flow. You can place additional policies in this flow. Policies are run in order, with the uppermost policy run first, followed by the next policy, and so on, until the response is sent back to the client.  An example of this is the redaction policy.  You may want to not return part of the result the back-end system provides
+
+The API Response entry is a visual representation of the point in the outbound flow when the response is returned to the client.
 
 ## Conclusion
 In this tutorial you learned the following:
   * How to create an API in API Platform Cloud Service
+  * The difference between the *Request* and *Response* flow
 
 #### Next Steps
  - [Deploying an API](../deploy_api)

@@ -63,7 +63,7 @@ If you are logged in as a user who manages the API, you can view the API URL fro
 1. Find the gateway (one API can be deployed to multiple gateways)
 1. Notice the *Load Balancer URL* and the _copy_ icon next to it.  You can click the _copy_ icon to copy the URL into your buffer
 
-### Invoke the API
+### Invoke the API (optional)
 Choose your favorite REST client.  For this exercise, you could simply use a web-browser because it is a simple _GET_ request. 
 - Define the URL to be the *Load Balancer URL* you captured in the previous step, plus the resource.
   - Example: http://'<host>':'<port>'/ticketService/1/tickets 
