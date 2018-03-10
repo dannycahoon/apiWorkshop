@@ -1,14 +1,16 @@
 # Warranty Claim
 
-## Narrative
+## Introduction
 
-NexGen is a company that as a wide variety of products.  As a part of selling the product, NexGen offers warranty coverage and on occasion, a customer needs to make a claim for a broken product.  NexGen management is growing concerned, that as their product line increases, the costs of maintaining the warranty fulfillment are growing considerably.  In a recent strategy session, NexGen identified a number of areas that they could improve their warranty claims management.  
+NexGen is a company that as a wide variety of products.  As a part of selling products, NexGen offers warranty coverage and on occasion, a customer needs to make a claim for service under the warranty agreement.  NexGen management is growing concerned that as their product line increases, the costs of maintaining the warranty fulfillment are growing considerably.  In a recent strategy session, NexGen identified a number of areas that they could improve their warranty claims management.  
 
+### Identified Pain-points
 Here are some of the current pain-points:
 1. The claim in-take manual and expensive.  Each case may be received via phone, or paper often resulting in requiring personnel to contact the customer to get details.
 1. The service ticketing is mixed in some manual systems and legacy systems due to acquisitions over the years
 1. The company has to maintain a large servicing personnel and are finding it increasingly difficult to maintain skillsets for certain products that they sell 
 
+### Proposed Solutions
 Here are some of the solutions
 - Use a modern service ticketing system.  
   - NexGen chose and implemented Oracle Service Cloud.  This makes it easier for all of NexGen sales and service employees to take care of the customer
@@ -21,6 +23,7 @@ Here are some of the solutions
     - Some of the partners have their own ticketing system which they will be able to integrate with the API that NexGen will provide
     - Through this process, NexGen discovered that it would be a great ideal to implement a microservice to handle query requests.  NexGen may want to in the future provide a mobile app to their customers and they realize that customers may check the status of their warranty claim quite often.  They want to offload that query traffic to a microservice.
 
+### Use-case
 This use-case is the Warranty Claim that is used across Integration, Process and API.  This is designed to provide a more realistic case as a narrative for the following goals:
 1. Oracle Integration Cloud (Covered in other labs)
   1. Create web-form and connect it to a warranty claim business process (Process Cloud)
@@ -33,7 +36,10 @@ This series of learning paths and tutorials will primarily leverage the *API* po
 ![](./TicketService.png)
 
 ## Implementing the Warranty Claim Ticket Service API
-Now that you understand NexGen's use-case above, here is the project requirements below that you received from your project manager.  
+Now that you understand NexGen's use-case above, here are the project requirements below that you received from your project manager.
+
+### Before you begin
+As you progress through this use-case, you will need to get access to both environments.  At the point of the tutorial where you will need access, the tutorial will advise you.  If you want to begin preparing ahead of time, you can [check out the options](../../environments) and decide which option makes sense for you.
 
 ### Design the API
 Design is critical as a first step for great APIs.  Collaboration ensures that we are creating the correct design.  We need our API to be well documented and we need to create a mock service in order to rapidly prototype our API
@@ -48,7 +54,7 @@ Part of what makes an API great is that it is secure.  Go ahead and begin creati
   - Create an API
   - Configure Endpoints
 
-At this point, you have a simple API Policy Implementation that provides the *proxy pattern*.  The proxy pattern is simply one end-point that receives a request and routes that request to another end-point.  Of course, you only have the API defined, it is not running anywhere! 
+At this point, you have a simple API Policy Implementation that provides the *proxy pattern*.  The *proxy pattern is simply one end-point that receives a request and routes that request to another end-point.  Of course, you only have the API defined, it is not running anywhere! 
 
 - Follow the [Deploying an API](../../tutorials/manage/apis/deploy_api) tutorial to deploy your API
   - Be aware that you may need to apply certain grant(s) to your gateway.  If so, follow the [Managing Access Grants on Gateways](../../tutorials/manage/gateways/grants)
@@ -207,9 +213,9 @@ Policies in API Platform Cloud Service serve a number of purposes. You can apply
 In these exercises, you will apply the following policies: 
 
 - Security
-  - Key Validation (Draft)
+  - Key Validation (_Draft_)
 - Traffic Management
-  - Application Rate Limiting (Draft)
+  - Application Rate Limiting (_Draft_)
 - Interface Management
   - Header Validation
   - Interface Filtering
@@ -226,7 +232,7 @@ If you are not already at the *API Implementation*
 - Choose your API
 - Click the *API Implementation* side-tab
 
-Notice you have policies on the right-hand side that are collapsed in groups.  You can expand the groups to see the policies.
+> Note: you have policies on the right-hand side that are collapsed in groups.  You can expand the groups to see the policies.
 
 To apply a policy
 - Hover your mouse over that policy in the right-hand list and click *Apply*
@@ -309,9 +315,9 @@ Now that you have successfully added policies to your API, you can send requests
 This time when you invoke the API, the request is rejected with a _Bad Request_ message. Why? Because of the header validation policy, you need to include a tenant-id header with a value of 1 or greater.
 
 In your REST client, add the following request header
-Name | Value
---- | ---
-tenant-id | 1
+
+- Name: tenant-id
+- Value: 1
 
 You should now get a response like you did in the [Invoke the API](#invoke-the-api) tutorial
 
