@@ -98,7 +98,8 @@ Choose your favorite REST client.  For this exercise, you could simply use a web
 
 Because you have not applied any policies, the request is passed to the backend service without further validation.  This is simply the “proxy pattern”. You should have received a response similar to the following. 
 
-```
+    ```
+
         {
               "_items": [
                 {
@@ -203,7 +204,8 @@ Because you have not applied any policies, the request is passed to the backend 
               "page": 1
              }
             }
- ```
+            
+    ```
  
 > Extra Credit: Find the analytics that will show your call.  Log in as the API Manager, choose the API and click the analytics side-tab.  Sign in as the gateway manager, choose the gateway and click the the analytics side-tab.  What are some of the differences between the analytic views for the gateway manager vs. the api manager?
  
