@@ -99,7 +99,6 @@ Choose your favorite REST client.  For this exercise, you could simply use a web
 Because you have not applied any policies, the request is passed to the backend service without further validation.  This is simply the “proxy pattern”. You should have received a response similar to the following. 
 
     ```
-
         {
               "_items": [
                 {
@@ -355,7 +354,6 @@ Choose your API Blueprint and click “Connect”
 TODO: Move publication to its own tutorial and provide path for Apiary team and non Apiary team.
 
 Save your changes, then click *Publish to Portal*
- 
 
 Now, you can select the > next to the API Portal URL, to open the APIs developer portal page
 
@@ -364,42 +362,17 @@ You may have to log in, just use your *API Manager* credentials.  You should the
 #### Publishing, Re-Publishing, and Un-Publishing
 Whenever you make changes to the General Settings tab, including updating an API’s description, overview text, or documentation, you must republish for the latest changes to be pushed to the Developer Portal.
 
-Note: API Platform Cloud Service retains only the current iteration of an API. When saved, updates to an API (including publishing, republishing, and unpublishing), take immediate effect. When you publish, the most recently saved version API details are pushed to the Developer Portal.
+Note: API Platform Cloud Service retains only the current iteration of an API in the Developer Portal. When saved, updates to an API (including publishing, republishing, and unpublishing), take immediate effect. When you publish, the most recently saved version API details are pushed to the Developer Portal.
 
 You can unpublish an API from the Developer Portal. If unpublished, Application Developers to be able to discover and subscribe to your API. Requests are still handled by the gateway as usual until the API is deactivated or undeployed from the gateway.
- 
-###API Grants
 
-TODO: Move API Grants to a separate tutorial
+### Entitle the API to a plan
+When you added the *Key Validation* policy (in draft), you completed the initial step to control access to the API by requiring application(s) to be entitled to call the API.  Later, you will activate that policy requiring your consumers identify their calls with a registered application in order to call your API.  That API must be entitled with a plan and the application will also be entitled with to a plan that entitles the API.  The the association of Applications to APIs are accomplished through plans.
 
-This section provides information and procedures for issuing API grants. Every action a user performs on an object in API Platform Cloud Service is made possible by a grant. Each role is eligible to receive only select grants. This section describes different grants for an API object.
+Entitling applications to call APIs, requires two primary tasks.
 
-These are the available API grants:
-- Manage API
-- View API Details
-- View API Public Details
-- Deploy API
-- Register App
-- Request Register App
-
-#### Manage API Grant (informational--no activity in this section)
-The Manage API grant is available only to an API Manager. It is given automatically to the person who creates an API. Administrators do not specifically need this grant.
-
-The Manage API grant gives an API Manager the right to view and edit API details, deploy or delete an API, and to issue grants to other API Managers.
-
-#### View API Details Grant (informational--no activity in this section)
-The View API Details grant allows API Managers and Gateway Managers to view the details of an API in read-only format in both the Management and Developer Portals.
-
-The information available includes general information, implementation, deployed endpoints, users, applications, and analytics. In this lab, the View API Details grant would be given to other employees of the company to allow them to view API implementation details.
-6.3: View API Public Details Grant (informational--no activity in this section)
-The View API Public Details grant is available to Application Developers. It allows them to view an API’s details page on the Developer Portal. 
-
-This grant does not allow Application Developers to register or to request registration of their applications to this API; the Register App grant is described in a later section.
- 
-#### Deploy API Grant (informational--no activity in this section)
-To allow a Gateway Manager to deploy an API without making a formal request, the API Manager who created the API gives the Gateway Manager the Deploy API grant.
-
-API Managers already have permission to deploy APIs they own due to being issued the Manage API Grant. A Deploy API grant can be given to an API Manager to allow them to deploy an API they did not create.
+1. Create an (or select an existing) API Plan
+1. Create an (or select an existing) application and entitle that application to the plan
 
 #### Register App
 The Register App grant allows a user to register an application to an API without another user’s approval. This grant also gives the user the right to view the API; you do not need to issue a separate view grant to a user if you give them the Register App or Request Register App grants.
