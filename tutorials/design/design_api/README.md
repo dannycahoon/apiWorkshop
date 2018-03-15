@@ -3,10 +3,9 @@ Using Oracle Apiary which is a part of Oracle API Platform Cloud Service, you ca
 
 ## Before you begin
 
-You need to have an account on Apiary.  You can sign up for a free developer account at http://apiary.io
+- You need to have an account on Apiary.  You can sign up for a free developer account at http://apiary.io
 
-
-## Creating the API
+## Creating the API Design
 ### Log into Apiary
 Point your browser to http://apiary.io and sign in.  You may see the sample API that was created when you signed up.
 ### Create a new API Project

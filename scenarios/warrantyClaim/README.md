@@ -66,30 +66,14 @@ You now have an API that simply receives the request and routes it to the back-e
 Perhaps you may want to begin with a basic implementation so your front-end developers are already pointing to the API, even before it is fully operational.
 
 #### Test the API
-Now that the API is deployed, you can invoke it in your favorite REST client.
-##### Identify the URL to use
-In order to invoke your API, you need to identify the URL.  To do this, you can view the deployment.  You can do this at the API level or the Gateway level depending on the user you are logged in as.
-###### API Gateway Manager
-If you are logged in as a user who manages the gateway, you can view the URL from the Deployments tab of the gateway
-1. Select Gateways
-1. Select your Gateway
-1. Click the *Deployments* left-tab
-1. Make sure the *Deployed* top-tab is highlighted
-1. Find your API
-1. Notice the *Load Balancer URL* and the _copy_ icon next to it.  You can click the _copy_ icon to copy the URL into your buffer
+Now that the API is deployed, you can invoke in to test if everything works as expected.
 
-###### API Manager
-If you are logged in as a user who manages the API, you can view the API URL from the Deployments tab of the API
-1. Select APIs
-1. Select your API
-1. Click the *Deployments* left-tab
-1. Make sure the *Deployed* top-tab is highlighted
-1. Find the gateway (one API can be deployed to multiple gateways)
-1. Notice the *Load Balancer URL* and the _copy_ icon next to it.  You can click the _copy_ icon to copy the URL into your buffer
+See [Invoking an API](../../tutorials/manage/apis/invoke_api/README.md) if you need help on how to invoke an API
 
 ##### Invoke the API
 Choose your favorite REST client.  For this exercise, you could simply use a web-browser because it is a simple _GET_ request. 
-- Define the URL to be the *Load Balancer URL* you captured in the previous step, plus the resource.
+
+- Use *Load Balancer URL* (see ../../manage/apis/deploy_api for how to get the Load Balancer URL if you don't already know how to do this)
   - _Example: http://`<host>`:`<port>`/ticketService/1/tickets_
 - Verb: GET
 - Headers (optional):
@@ -98,7 +82,7 @@ Choose your favorite REST client.  For this exercise, you could simply use a web
 
 Because you have not applied any policies, the request is passed to the backend service without further validation.  This is simply the “proxy pattern”. You should have received a response similar to the following. 
 
-    ```
+```
         {
               "_items": [
                 {
@@ -204,7 +188,7 @@ Because you have not applied any policies, the request is passed to the backend 
              }
             }
             
-    ```
+```
  
 > Extra Credit: Find the analytics that will show your call.  Log in as the API Manager, choose the API and click the analytics side-tab.  Sign in as the gateway manager, choose the gateway and click the the analytics side-tab.  What are some of the differences between the analytic views for the gateway manager vs. the api manager?
  
@@ -330,43 +314,13 @@ If you configured your Interface Filtering policy, you should have received the 
 The request is rejected with a *Method not allowed* message. Why? Because of the interface filtering policy, requests to this resource are rejected. The policy rejects requests to any resource other than /tickets*. This is designed to protect the underlying API from callers trying to call resources you don’t intend to expose.
 
 ### Publish the API
-A great API can be discovered by potential consumers.  Publishing the API makes it available in the developer portal for developers who are creating a wide variety of applications.  Developers search for and learn about APIs in the developer portal.  The API Manager typically publishes the API when it is ready for other users to be able to consume it.  Some examples are:
+Follow [Publishing an API](../../tutorials/manage/apis/publish_api) to publish your API
 
-- An API is ready to be made available for general consumption:  This is typically an API in production with all of the work completed.
-- An API that is released just to a select group of developers: This is typically an API that is not yet ready for production, but a select group of developers are provided access in order to try the API while it is under development.
-
-In this exercise, you will learn about:
-- Configuring the full Developer Portal URL
-- Configuring the Overview Text
-- Configuring the Documentation Page
-- Previewing the Content
-- Publishing, Re-Publishing, and Un-Publishing
-
-#### Configuring the API Documentation
-You've been working as the API Manager on the API Implementation, now select the *Publication* side-tab
-
-Update the API Portal URL, this serves as the “permalink” for your API’s developer portal page.  Notice that the URL begins with `<not published>`  This is a placeholder that will update to the actual developer portal location.  The value you are providing is the end-point for your APIs developer portal page.  You can use any value you want, but we suggest you just use the name of your API.
-
-Under *Documentation*, click the Apiary Link
- 
-Choose your API Blueprint and click “Connect”
-
-TODO: Move publication to its own tutorial and provide path for Apiary team and non Apiary team.
-
-Save your changes, then click *Publish to Portal*
-
-Now, you can select the > next to the API Portal URL, to open the APIs developer portal page
-
-You may have to log in, just use your *API Manager* credentials.  You should then see the Portal page for your API which includes your API Blueprint!
- 
-#### Publishing, Re-Publishing, and Un-Publishing
-Whenever you make changes to the General Settings tab, including updating an API’s description, overview text, or documentation, you must republish for the latest changes to be pushed to the Developer Portal.
-
-Note: API Platform Cloud Service retains only the current iteration of an API in the Developer Portal. When saved, updates to an API (including publishing, republishing, and unpublishing), take immediate effect. When you publish, the most recently saved version API details are pushed to the Developer Portal.
-
-You can unpublish an API from the Developer Portal. If unpublished, Application Developers to be able to discover and subscribe to your API. Requests are still handled by the gateway as usual until the API is deactivated or undeployed from the gateway.
+- When selecting your end-point, be aware if you are using a shared environment, you may need to modify it to keep it unique.
 
 ### Entitle the API to a plan
+Now your API is published to the developer, consumers can learn about it, but it needs to be entitled to a plan in order for consumers to register to use it.
+
 When you added the *Key Validation* policy (in draft), you completed the initial step to control access to the API by requiring application(s) to be entitled to call the API.  Later, you will activate that policy requiring your consumers identify their calls with a registered application in order to call your API.  That API must be entitled with a plan and the application will also be entitled with to a plan that entitles the API.  The the association of Applications to APIs are accomplished through plans.
 
 Entitling applications to call APIs, requires two primary tasks.

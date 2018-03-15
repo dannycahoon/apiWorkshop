@@ -22,8 +22,6 @@ This is often referred to as "Creating an API", however there are many component
  
 > If you are using a shared environment, your API may already be created.  You can elect to modify the name such as add your initials so you know which API is yours
 
-TODO: Add Plan info
-
 Once your API is created, you will see it in the list of APIs.  Go ahead and click on the API name to continue editing it.
 
 #### Select the specification (optional)
