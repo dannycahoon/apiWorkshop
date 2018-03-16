@@ -319,14 +319,17 @@ Follow [Publishing an API](../../tutorials/manage/apis/publish_api) to publish y
 - When selecting your end-point, be aware if you are using a shared environment, you may need to modify it to keep it unique.
 
 ### Entitle the API to a plan
-Now your API is published to the developer, consumers can learn about it, but it needs to be entitled to a plan in order for consumers to register to use it.
+Now your API is published to the developer portal, consumers can learn about it, but it needs to be entitled to a plan in order for consumers to register to use it.
 
 When you added the *Key Validation* policy (in draft), you completed the initial step to control access to the API by requiring application(s) to be entitled to call the API.  Later, you will activate that policy requiring your consumers identify their calls with a registered application in order to call your API.  That API must be entitled with a plan and the application will also be entitled with to a plan that entitles the API.  The the association of Applications to APIs are accomplished through plans.
 
 Entitling applications to call APIs, requires two primary tasks.
 
 1. Create an (or select an existing) API Plan
+  - To create a plan, you need to have the *PlanManagers* role.
+  - To select an existing plan, the plan manager needs to have given you the *Entitle* grant
 1. Create an (or select an existing) application and entitle that application to the plan
+  - As an *API Manager* or an *App Developer* you can create applications.
 
 #### Register App
 The Register App grant allows a user to register an application to an API without another user’s approval. This grant also gives the user the right to view the API; you do not need to issue a separate view grant to a user if you give them the Register App or Request Register App grants.
