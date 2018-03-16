@@ -331,16 +331,16 @@ Entitling applications to call APIs, requires two primary tasks.
 1. Create an (or select an existing) application and entitle that application to the plan
   - As an *API Manager* or an *App Developer* you can create applications.
 
+Follow [Entitle an API to a Plan](../../tutorials/apis/entitle_api) to entitle your API to *DeveloperPlan*
+
 #### Register App
-The Register App grant allows a user to register an application to an API without another user’s approval. This grant also gives the user the right to view the API; you do not need to issue a separate view grant to a user if you give them the Register App or Request Register App grants.
+As the *API Manager*, select the *Applications* menu.
 
-This grant is issued to Application Developers or API Managers.
+1. Create an Application following the provided naming convention
 
-To give the Register App grant to an Application Developer user:
-- Click the User Management tab.
-- Click the Register tab, and then click Add Grantee.
-- Enter Application Developer User in the Choose Grantee field and press Enter. 
-- Select Application Developer User and click Add. This user has been given the Register App grant; notice their name is added to the Register tab.
+Click on the created app, and add an *Entitlement* for the *DeveloperPlan*
+
+Capture the Application Key for later use.
 
 #### Request Register App Grant (informational--no activity in this section)
 Like the Register App grant, the Request Register App grant is issued to Application Developers or API Managers. Users issued this grant can only request a registration. While their request is being reviewed by an API Manager, they cannot use the API. An API Manager must approve the registration request for the runtime key validation policy to approve requests sent to an API using this application’s key.
@@ -362,10 +362,9 @@ You can search for an API by entering keywords in the field at the top of the ca
 In this task you sign in as Application Developer User from the previous section. You granted this user the Application Developer role, meaning they are able to view APIs in the catalog and register them to applications without requesting approval.
 
 To log in as Application Developer User:
-- In an incognito window, a private browser session, or an entirely different browser, navigate to https://oc-129-150-76-122.compute.oraclecloud.com/developers This is the Developer Portal UI. You use incognito mode as the session persists between the Management Portal and the Developer Portal if you use the same browser session.
+- In an incognito window, a private browser session, or an entirely different browser, navigate to the developer portal for your [environment](../../environments) This is the Developer Portal UI. You use incognito mode as the session persists between the Management Portal and the Developer Portal if you use the same browser session.
 
-Only APIs that have been published appear in the catalog. If you have not published your API, see Section 3.5: Publishing, Re-Publishing, and Un-Publishing. To view an API, the Application Developer must also have the View API Details grant or another grant that implies these privileges. You gave the Application Developer User the necessary grant in Section 4.4: Register App.
-
+Only APIs that have been published appear in the catalog. If you have not published your API, see [Publish the API](#publish-the-api): To view an API, the Application Developer must also have the View API Details grant or another grant that implies these privileges.
  
 ##### To discover APIs in the catalog:
 - From the API catalog page, enter Ticket, or another query, in the search box at the top, and then press Enter. All of the APIs matching this query appear.
@@ -377,103 +376,10 @@ Only APIs that have been published appear in the catalog. If you have not publis
 When you select an API from the API Catalog, its API Portal details page appears. This page displays information about an API. You can see the state of an API (Beta, Released, Deprecated, etc), whether you can register to it, any applications that you have already registered to it, registration requests awaiting approval, etc. Overview text describing the API’s basic features also appears on this page.
 - API Portal Documentation (informational--no activity in this section)
 The Documentation tab embeds the documentation reference you specified on the General Settings tab when you created the API. Depending on how you configured this, the documentation appears inside a frame as a website, as text, or the documentation on Apiary.
- 
-#### Application Registration
-API Platform Cloud Service uses application registrations to determine which users have the right to use an API. Each application is assigned a key. This key can be passed in a header or as a query parameter with the request as specified in a key validation policy. If a key validation policy is enabled, only requests with a valid, current application key corresponding to a registered API are passed; any other requests to this API are rejected.
 
-Get ready to learn about: 
-- Creating an Application
-- Registering an Application to an API
-- Viewing API Registrations for your Application (Application Developer)
-- Viewing Application Registrations for your API (API Manager)
-- Registering Another Application to Your API
-- Finding Your Application Keys
-- Activating Draft Policies
-- Redeploying APIs
-- Invoking APIs
-- Sending Requests Using a Postman Collection
-- Suspending application registrations
-- Reissuing a new application key
-- Deregistering an application from an API
-
-##### Create an Application
-There are multiple ways to create an application in API Platform Cloud Service. Application Developers can create applications from the My Applications tab in the Developer Portal or during the API registration process. API Managers can create applications directly in the API Manager UI. An Application key is generated when you create an application. This key is used with the key validation policy to ensure that only requests from applications registered to an API are passed by the gateway.
-
-In this exercise, you will create an application from the My Applications page before registering it to our API.
-
-To create a new application from the My Applications page:
-1. Click the My Applications icon at the top right of the UI. The My Applications page appears.
-1. Click New Application. The Create Application page appears.
-1. Enter a name for your Application.  For example, TicketServiceApp and an optional description. 
-1. Select an application type (your choice) from the Application Type list.
-1. In the Contact Information section, enter your first name, last name, and email address.  The Save button appears after you have entered your information.
-1. Click Save. The application appears on the My Applications page.
-
-Capture the Application Key for later use:
-1.	Click on the Application you just created
-1.	Highlight and copy the application key.  Paste it in a notepad for later use.
-
-#### Register an Application to an API
-Follow this procedure to register your application to the API you created earlier in the lab. You have management privileges, so you can complete the registration.
-
-To register an application to an API:
-1. In the API catalog, select your API.
-1. Click Register.
-1. Select your application that you created in the previous exercise. 
-If required, you can click Edit this Application to edit the application details.
-1.	Click Register API.
-
-This application is automatically registered because you have a grant which allows you to register applications directly to the API without approval from an API Manager. Without this grant, an API the registration request would appear in the Management Portal, where an API Manager approves or rejects the request. 
-
-##### View API Registrations for your Application (Application Developer) (informational--no activity in this section)
-When viewing an API (either on the API’s detail page or in the API Catalog list in the Developer Portal) you can see which applications are registered to it.
-
-You can see which APIs a specific application is registered to by viewing the detail page of that application.
-
-##### View Application Registrations for your API(API Manager) (informational--no activity in this section)
-API Managers can view all of the applications registered by all Application Developers to an API. Application Developers can only see which of their own applications are registered.
-
-API Managers can also view applications that are requesting registration, registrations that have been suspended, and previous registration requests that have been rejected.
-
-Sign back in to the Management Portal as your API Manager user (api-manager-user-<nn>) to view all information for an API. Select the API and then click the Registrations tab, the fifth tab on the left when viewing an API. The Registered tab appears by default. It shows all of the applications registered to an API. The application you registered earlier appears here. You can expand an application to view the application key, details, and request and approval data.
-
-If you had been given the Request Register grant, the application registration would not have been automatically approved. The application would appear on the Requesting Registration tab. To register the application, the API Manager would need to approve it.
-
-The state of the application to API contact is also evaluated by the key validation policy. Even if a request passes a valid key, the application needs to be registered for the policy to pass the request. If an application registration is suspended or deregistered, requests are rejected even if a valid key is present.
-
-##### Register the Customer Mobile App to your API
-There is already an application named Customer Mobile App in the platform. In this task you register this app to your API to preview application-striped analytics later in the lab.
-
-To register the Customer Mobile App to your API:
-1. In your initial browser session, sign back into the Management Portal as the API Manager user.
-1. From the APIs tab, click the TicketServiceTokyo<nn> (<nn> is your student number) API.
-1. Click the Registrations tab.
-1. Click Register Application.
-1. Select Customer Mobile App 
-1. Ensure that Registered is selected in the Select Initial State section.
-1. Click Register.
-
-##### Find your Application Keys
-Requests sent to endpoints secured with a key validation policy fail unless each is sent with a key for a registered application. 
-
-You’ll later send requests using two application keys to aggregate analytics metric per application.
-
-To find the application keys for your applications:
-1. After completing the previous task, click the Applications menu
-1. Notice that you can only see the Customer Mobile App, because this is the only app as the API Manager user you’ve been granted the ability to manage.  The TicketServiceTokyo<nn> (<nn> is your student number) app is owned/managed by the app-dev-user-<nn>
-1. Click the Customer Mobile App
-1. Here you can see the app key, you could also re-issue it if you had to. You can go ahead and copy it and paste it into your text document with your other application key.
 
 ### Activate Draft Policies
-In this task you activate the draft policies, key validation and application rate limiting, you created earlier in the lab. You couldn’t successfully invoke the APIs with these policies applied until this point in the lab because these policies require app keys to pass requests.
-
-To apply the policies:
-1. Click the API Implementation tab.
-1. Hover over the Key Validation policy, and click Edit.
-1. Click Apply, at the bottom of the dialog.
-1. Hover over the Application Rate Limiting policy, and click Edit.
-1. Click Apply, at the bottom of the dialog.
-1. Click Save Changes.
+Return to your API Implementation, edit the draft policies and save them
 
 ### Redeploy your API
 You need to redeploy your API to activate the key validation and application rate limiting policies you just added.
@@ -495,23 +401,6 @@ You should now see the results with an HTTP 200 OK
 1.	Now, try clicking Send repeatedly until you hit the rate limit
 
 Once you hit the rate limit, you should then get rejections advising you that you are over your limit.
-
-### Suspend an Application (informational--no activity in this section)
-The key validation policy requires that an application is in a registered state. If you suspend an application, all requests to this API are rejected (Hint: You can suspend an application from an API’s Applications > Registered tabs). If you send the same request you sent in the previous section, it is rejected. The application to API contract is broken; it will remain broken (and all requests are rejected) until the application is reregistered.
-
-If you suspended the application, make sure that you reapprove the registration before proceeding to the next section.
-
-### Reissue a new Application Key (informational--no activity in this section)
-If an application key is compromised, you can reissue a new key for the application from its detail page in the Developer Portal or the Manager Portal.
-
-Application keys are established at the application level. If you change an application’s key, this affects all APIs with a key validation policy applied to which an application is registered. Every request to these APIs must use the new key. Requests using the old key are rejected. APIs without the key validation policy are not affected as these do not require a valid application key to pass requests.
-
-### Deregister an Application from an API (informational--no activity in this section)
-You can deregister an application from an API if the application no longer needs to use the API. When an application is de-registered, the record of registration is deleted and all requests to APIs with an associated key validation policy are rejected. If you re-register an application to an API, the existing application key remains valid as keys are established at the application level and not the API level.
-
-You can deregister an application from both the Management Portal (from the Registrations tab for an API, the fifth tab on the left) and the Developer Portal (on the application detail page).
-
-Oracle recommends that you first suspend an application registration if there are issues with a specific API. If you determine that the API will no longer be used for an application, then you can deregister the application.
 
 ## Analytics
 API Platform Cloud Service includes analytics that you can use to determine how, when, and why your APIs are being used; review how often and why requests are rejected; and track trends in this data over time.
@@ -621,36 +510,5 @@ To view analytics for all APIs deployed to a gateway:
 1. Click the Gateways tab.
 1. Click Development Gateway.
 1. Click the Analytics tab.
-
-
-# Extras
-While we were working, the Service Integration team created the back-end REST service and it is ready to be connected to the API.
-
-Edit the Service Request in the API and select an existing Service (ServiceTicketImpl).  Apply your changes, save your API and remember to re-deploy!
-
-Now, repeat some of your API calls.  You may notice the results are different because this is the actual service implementation, not the mock-service.
-
-Try to create a new ticket, by performing a POST with a payload similar to the following (change for your use):
-```
-  {
-    "ticketID": "99-00001",
-    "subject": "User 99 Test Error",
-    "summary": "Customer reports that 5AM comes too early",
-    "customer": "Sleepy Dwarf's Mattress Store",
-		"customerID": "9984747",
-		"partner": "Sheep Counters, Inc",
-		"partnerID":"55757",
-    "product": "Alarm Clock",
-    "status": "Unresolved",
-		"tracking":""
-  }
-```
-You should now receive an HTTP 201 Created along with some tracking data. 
-
-You can now repeat when of your previous GET queries and look for your new record, or you you can add a where criteria, such as 
-http://gatewayHost:gatewayPort/api?where={“ticketID”: “99-00001”} 
-
-
- 
 
 Congratulations on finishing this part of the lab!  Now let’s go have some fun!
