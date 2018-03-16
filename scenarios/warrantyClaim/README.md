@@ -331,7 +331,7 @@ Entitling applications to call APIs, requires two primary tasks.
 1. Create an (or select an existing) application and entitle that application to the plan
   - As an *API Manager* or an *App Developer* you can create applications.
 
-Follow [Entitle an API to a Plan](../../tutorials/apis/entitle_api) to entitle your API to *DeveloperPlan*
+Follow [Entitle an API to a Plan](../../tutorials/manage/apis/entitle_api) to entitle your API to *DeveloperPlan*
 
 #### Register App
 As the *API Manager*, select the *Applications* menu.
