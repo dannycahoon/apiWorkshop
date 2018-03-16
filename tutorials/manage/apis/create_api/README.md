@@ -2,7 +2,7 @@
 This is often referred to as "Creating an API", however there are many components, from design, documentation, the service implementation and the policy implementation.  What we are talking about here is as the API Manager, you will create and define the API.  It is from this point that all of the other activities, such as deployment, publication and promotion, access grants, etc are launched.  Perhaps this is why we often say "Creating an API"   
 
 ## Before you begin
-1. You have an API Platform environment.  See [environments](../../../environments/README.md) for details on procuring an API Platform environment.
+1. You have an API Platform environment.  See [environments](../../../.../environments/README.md) for details on procuring an API Platform environment.
 1. You have completed the tutorial [Designing an API](../../design/design_api)
 
 ## Creating the API
