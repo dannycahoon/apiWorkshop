@@ -81,5 +81,8 @@ In this tutorial you learned the following:
   * How to create an API in API Platform Cloud Service
   * The difference between the *Request* and *Response* flow
 
+## Learn more
+To learn more about creating APIs, visit [Creating an API](http://www.oracle.com/pls/topic/lookup?ctx=en/cloud/paas/api-platform-cloud&id=GUID-B9691D64-FCD2-4A8C-9DA3-8E29CB48E1E2) in our documentation
+
 #### Next Steps
  - [Deploying an API](../deploy_api)
