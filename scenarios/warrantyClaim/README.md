@@ -231,7 +231,7 @@ Now, let's apply policies to this API
 #### Security
 Beginning with security, we are going to configure a *Key Validation* policy.  However, we are going to save it as draft at this point because we want to have it in our API, but not yet enforcing requests.  This allows us to work with our implementation and collaborate with others before our changes become active.  See if you can add a *Key Validation* policy that satisfies the requirements below.
 
-#####Key Validation (Draft)
+##### Key Validation (Draft)
 - Key Delivery Approach: Header
 - Key Header: app-key
 
