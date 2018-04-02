@@ -6,31 +6,31 @@ NexGen is a company that as a wide variety of products.  As a part of selling pr
 
 ### Identified Pain-points
 Here are some of the current pain-points:
-1. The claim in-take manual and expensive.  Each case may be received via phone, or paper often resulting in requiring personnel to contact the customer to get details.
-1. The service ticketing is mixed in some manual systems and legacy systems due to acquisitions over the years
-1. The company has to maintain a large servicing personnel and are finding it increasingly difficult to maintain skillsets for certain products that they sell 
+1. The claim in-take is manual and increasingly expensive.  Each case may be received via phone, or paper often resulting in requiring personnel to contact the customer to get details.
+1. The handling of service requests are spread across manual processes and legacy systems due to acquisitions over the years
+1. The company has to maintain a large staff to peform the actual repairs and are finding it increasingly difficult to maintain skill-sets for certain products in its portfolio
 
-### Proposed Solutions
-Here are some of the solutions
+### Proposed Solution
+Here are some of the key aspects of the solution
 - Use a modern service ticketing system.  
   - NexGen chose and implemented Oracle Service Cloud.  This makes it easier for all of NexGen sales and service employees to take care of the customer
 - Create a modern web interface for customers to be able to submit warranty claims.  This interface should be part of a process management system that has the ability to connect to various legacy back-end systems as well as SaaS applications.  
   - NexGen chose and implemented Oracle Integration Cloud.  This eliminates many manual, error-prone steps as well as provides great flexibility for the future
 -  Enter into a series of partnerships with service firms who can take care of repairs for certain product lines.  These partners are expected to represent NexGen by completing the repair and updating ticket statuses as if the product were repaired or replaced directly by NexGen
-  - NexGen is choosing Oracle API Platform Cloud Service.
+  - After performing extensive research, NexGen chose API Platform Cloud Service which is the only solution that provides complete support for the API Management lifecycle
   - Using API Platform Cloud Service, NexGen will provide an API to partners to be able to query and update Service Tickets. 
     - This API will give the partner the necessary access without having to add the partner to back-end/SaaS applications like Oracle Service Cloud.
     - Some of the partners have their own ticketing system which they will be able to integrate with the API that NexGen will provide
     - Through this process, NexGen discovered that it would be a great ideal to implement a microservice to handle query requests.  NexGen may want to in the future provide a mobile app to their customers and they realize that customers may check the status of their warranty claim quite often.  They want to offload that query traffic to a microservice.
 
-### Use-case
-This use-case is the Warranty Claim that is used across Integration, Process and API.  This is designed to provide a more realistic case as a narrative for the following goals:
+### Products in the solution
 1. Oracle Integration Cloud (Covered in other labs)
   1. Create web-form and connect it to a warranty claim business process (Process Cloud)
   1. Connect to Service Cloud with a REST interface that reshapes the message and provides orchestration where necessary (Integration Cloud)
 1. Oracle API Platform Cloud (*Covered in this lab*)
-  1. Create an API that interacts with a Microservice
-  1. Link the API with the Integration Service
+  1. Create an API that interacts with a Microservice (we can initially use a mock-service that is created for us).
+    1. The microservice architectural style essentially takes a specific function and encapsulates it into one service.  For example in this case, s ServiceTicket is everything to do with creating, updating, querying a service ticket, but it does not do anything with things like customers, partners, parts, etc.  It maintains its own copy of data, even though the data is also in other systems.
+  1. Link the API with the Integration Service.  Whenever a partner updates a service ticket, we can automatically carry that update over to other internal systems to update service requests as if the partner were a user of those internal systems.
 
 This series of learning paths and tutorials will primarily leverage the *API* portion of this scenario but to "see the big picture" here is an overview diagram of the use-case
 ![](./TicketService.png)
@@ -39,7 +39,7 @@ This series of learning paths and tutorials will primarily leverage the *API* po
 Now that you understand NexGen's use-case above, here are the project requirements below that you received from your project manager.
 
 ### Before you begin
-As you progress through this use-case, you will need to get access to both environments.  At the point of the tutorial where you will need access, the tutorial will advise you.  If you want to begin preparing ahead of time, you can [check out the options](../../environments) and decide which option makes sense for you.
+As you progress through this use-case, you will need to gain access to Oracle API Platform Cloud Service and Oracle Apiary Cloud Service.  At the point of the tutorial where you will need access, the tutorial will advise you.  If you want to begin preparing ahead of time, you can [check out the options](../../environments) and decide which option makes sense for you.
 
 ### Design the API
 Design is critical as a first step for great APIs.  Collaboration ensures that we are creating the correct design.  We need our API to be well documented and we need to create a mock service in order to rapidly prototype our API
