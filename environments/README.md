@@ -21,7 +21,7 @@ Once you have made your selection and have access to your environment, you may w
 ## PM Demo Environment
 A [demo environment](https://oc-129-150-76-122.compute.oraclecloud.com/apiplatform) is maintained on Oracle Public Cloud.  You must not be connected to an internal Oracle network through VPN or within an Oracle office (except clear-guest).
 
-> Note: If you are participating in an instructor-led event, your instructor may provide you with a sequence number and details on the user credentials you would use to access this instance.  If you are accessing this through self-study (not been given any sequence/user credentials) then you can use the generic accounts below.
+> Note: If you are participating in an instructor-led event, your instructor may provide you with a sequence number and details on the user credentials you would use to access this instance.  If you are accessing this through self-study (not been given any sequence/user credentials) then you can use the generic accounts below.  Typically this is appending the sequence to the user as "-1 or -10.  For example, api-manager-user-1
 
 Here are the following generic users and passwords that are shared.
 * API Manager: api-manager-user/0racl3iPa$$U5r
