@@ -29,10 +29,15 @@ Once your plan is created, you will see it in the list of plans.  Go ahead and c
 
 You can choose to leave the plan as unlimited, or set the rate limits.  To keep with the _DeveloperPlan_ model, set a limit as follows:
 
-TODO: Continue Building...
+- 10 requests per *Minute*
+
+Choose the *Development Gateway* or gateway you have deployed if you are using an instance of API Platform that you have provisioned.
+
 ## Conclusion
 In this tutorial you learned the following:
   * How to create an Plan in API Platform Cloud Service
+  * How to set limits on the plan
+  * How to specify which gateway(s) the plan can be deployed
 
 #### Next Steps
  - [Entitling an API](../entitle_api)
