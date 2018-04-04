@@ -21,13 +21,13 @@ Once you have made your selection and have access to your environment, you may w
 ## PM Demo Environment
 A [demo environment](https://oc-129-150-76-122.compute.oraclecloud.com/apiplatform) is maintained on Oracle Public Cloud.  You must not be connected to an internal Oracle network through VPN or within an Oracle office (except clear-guest).
 
-> Note: If you are participating in an instructor-led event, your instructor may provide you with a sequence number and details on the user credentials you would use to access this instance.  If you are accessing this through self-study (not been given any sequence/user credentials) then you can use the generic accounts below.  Typically this is appending the sequence to the user as "-1 or -10.  For example, api-manager-user-1
+> Note: If you are participating in an instructor-led event, your instructor may provide you with a sequence number and details on the user credentials you would use to access this instance.  If you are accessing this through self-study (not been given any sequence/user credentials) then you can use the generic accounts below.  Typically this is appending the sequence to the user as "-1 or -10.  For example, api-manager-user-1, the passwords are OracleiPa$$Us3r(XX), replace the (XX) with the corresponding sequence number
 
 Here are the following generic users and passwords that are shared.
-* API Manager: api-manager-user/0racl3iPa$$U5r
-* API Gateway Manager: api-gateway-manager/0racl3iPa$$U5r
-* APP Developer User: app-dev-user/0racl3iPa$$U5r
-* Service Manager: service-manager-user/0racl3iPa$$U5r
+* API Manager: api-manager-user/OracleiPa$$Us3r
+* API Gateway Manager: api-gateway-manager/OracleiPa$$Us3r
+* APP Developer User: app-dev-user/OracleiPa$$Us3r
+* Service Manager: service-manager-user/OracleiPa$$Us3r
 
 You do not have full admin rights to this environment.  Not all tutorials will work here.  For example, a tutorial involving grants may run into conflicts given the shared nature of this environment.
 
