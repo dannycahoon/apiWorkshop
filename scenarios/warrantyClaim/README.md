@@ -338,7 +338,7 @@ As the *API Manager*, select the *Applications* menu.
 
 1. Create an Application following the provided naming convention
 
-Click on the created app, and add an *Entitlement* for the *DeveloperPlan*
+Click on the created app, and click on the left-hand *Subscriptions* tab.  Click *Subscribe to Plan* to add an *Entitlement* for the *DeveloperPlan*
 
 Capture the Application Key for later use.
 

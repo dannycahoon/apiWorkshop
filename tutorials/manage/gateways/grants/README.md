@@ -22,7 +22,7 @@ Gateways are where APIs actually run.  Users that have the *GatewayManager* role
 ## Issuing Gateway Grants
 1. Log into API Platform as a user with the *GatewayManager* role.  See [environments](../../../environments/README.md)
 1. Select the Development Gateway (or whatever gateway you have deployed)
-1. Click the *Users* tab
+1. Click the *Grants* tab
 1. Take a moment to review all of the grants.  For each grant, click on the header-tab to view the list of users who are assigned that grant
   - Manage Gateway: Gateway Manager users issued this grant are allowed to manage API deployments to this gateway and manage the gateway itself.
   - View All Details: API and Gateway Manager users issued this grant are allowed to view all information about this gateway.

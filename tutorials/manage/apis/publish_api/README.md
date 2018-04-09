@@ -44,7 +44,7 @@ Whenever you make changes to the General Settings tab, including updating an API
 
 Note: API Platform Cloud Service retains only the current iteration of an API in the Developer Portal. When saved, updates to an API (including publishing, republishing, and unpublishing), take immediate effect. When you publish, the most recently saved version API details are pushed to the Developer Portal.
 
-You can unpublish an API from the Developer Portal. If unpublished, Application Developers to be able to discover and subscribe to your API. Requests are still handled by the gateway as usual until the API is deactivated or undeployed from the gateway.
+You can unpublish an API from the Developer Portal. If unpublished, Application Developers will no longer be able to discover and subscribe to your API. Requests are still handled by the gateway as usual until the API is deactivated or undeployed from the gateway.
 
 ## Conclusion
 In this tutorial you learned how to:
