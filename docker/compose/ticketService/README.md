@@ -2,7 +2,7 @@
 This is a simple microservice that is used to store Service Tickets.  Following the principles of Microservices, this service is domain-bound to handle service tickets and only service tickets.  This service also maintains it's own copy of the data, even if the data exists elsewhere.
 
 This service is used in the [Warranty Claim](../../../scenarios/warrantyClaim) training scenario.
-[](../../../scenarios/warrantyClaim/TicketService.png)
+![](../../../scenarios/warrantyClaim/TicketService.png)
 
 ## Getting Started
 ### Before you begin
