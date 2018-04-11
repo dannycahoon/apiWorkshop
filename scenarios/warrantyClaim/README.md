@@ -48,11 +48,12 @@ Design is critical as a first step for great APIs.  Collaboration ensures that w
 Now you have an API Design that all of your stakeholders clearly understand and have agreed to.  Your engineering teams can leverage the mock service as they develop their respective components.  You know that this will ultimately be made available to partners, so you want to get started on the policy enforcement implementation
 
 ### Creating an API Policy Implementation
-Part of what makes an API great is that it is secure.  Go ahead and begin creating your API Policy implementation so that your teams can begin using that
+A great API extends beyond just a simple REST service by providing a managed end-point for only approved users to gain access under a proper SLA.  To create this managed end-point, we will begin with creating an API Policy Implementation
+
 - Follow the [Creating an API Policy Implementation](../../tutorials/manage/apis/create_api) tutorial to create your API.  In this tutorial, you will:
   - Sign in as an API Manager
   - Create an API
-  - Configure Endpoints
+  - Configure the *API Request* and *Service Request* Endpoints
 
 At this point, you have a simple API Policy Implementation that provides the *proxy pattern*.  The *proxy pattern is simply one end-point that receives a request and routes that request to another end-point.  Of course, you only have the API defined, it is not running anywhere! 
 
@@ -73,7 +74,7 @@ See [Invoking an API](../../tutorials/manage/apis/invoke_api/README.md) if you n
 ##### Invoke the API
 Choose your favorite REST client.  For this exercise, you could simply use a web-browser because it is a simple _GET_ request. 
 
-- Use *Load Balancer URL* (see ../../manage/apis/deploy_api for how to get the Load Balancer URL if you don't already know how to do this)
+- Use *Load Balancer URL* (see [Invoking an API](../../manage/apis/invoke_api) for how to get the Load Balancer URL if you don't already know how to do this)
   - _Example: http://`<host>`:`<port>`/ticketService/1/tickets_
 - Verb: GET
 - Headers (optional):
@@ -207,7 +208,7 @@ In these exercises, you will apply the following policies:
 - Other
   - Groovy Script
 
-> Note: You apply the key validation and application rate limiting policies as Drafts here. You activate them later in the lab. These require that you create and register an application, which is described in a later section.
+> Note: You apply the key validation and application rate limiting policies as **Draft** here. You activate them later in the lab. These require that you create and register an application, which is described in a later section.
 
 Believe it or not, you have already applied policies!  The *API Request* and the *Service Request* are policies so you should already be familiar with the general steps of applying a policy.  Here we are going to provide you with the policies and the configuration values you should use.  See if you can make your way through without having to refer to the examples.  Don't worry though, if you get confused, then the examples should help you through.
 
@@ -262,7 +263,7 @@ Sometimes we need to make sure the request contains a certain header, or ensure 
 Take a moment to review your implementation so far.  Notice the difference between the *Key Validation*, *Application Rate Limiting* and *Header Validation* policies in your API?  The first two should have a dotted line indicating that they are saved as draft.
 
 ###### Extra Credit
-Go ahead and re-deploy your API.  Once deployed, or requesting deployment, look at the API Deployment from the gateway perspective.  Expand the API deployment.  Do you see the policies that are in draft?
+Go ahead and re-deploy your API.  Follow [Deploying an API](../../tutorials/manage/apis/deploy_api) if you need a reminder of how to do this.  Once deployed, or requesting deployment, look at the API Deployment from the gateway perspective.  Expand the API deployment.  Do you see the policies that are in draft?
  
 ##### Interface Filtering
 Apply the *Interface Filtering* policy, which is used to filter requests based on the resources and methods specified in the request. Here, you’ll configure this policy to pass GET requests to one resource, /tickets (which returns all tickets) but reject any other type of request.
@@ -381,8 +382,8 @@ The Documentation tab embeds the documentation reference you specified on the Ge
 ### Activate Draft Policies
 Return to your API Implementation, edit the draft policies and save them
 
-### Redeploy your API
-You need to redeploy your API to activate the key validation and application rate limiting policies you just added.
+### Re-deploy your API
+You need to re-deploy your API to activate the key validation and application rate limiting policies you just added.  Visit [Deploying an API](../../tutorials/manage/apis/deploy_api) if you need a refresher.
 
 ### Invoke your API 
 Now that you have successfully created an application and gathered your app keys, you’ll send requests to the API to ensure the policies work as intended.
