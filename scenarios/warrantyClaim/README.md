@@ -13,12 +13,12 @@ Here are some of the current pain-points:
 ### Proposed Solution
 Here are some of the key aspects of the solution
 - Use a modern service ticketing system.  
-  - NexGen chose and implemented Oracle Service Cloud.  This makes it easier for all of NexGen sales and service employees to take care of the customer
+  - NexGen chose and implemented **Oracle Service Cloud**.  This makes it easier for all of NexGen sales and service employees to take care of the customer
 - Create a modern web interface for customers to be able to submit warranty claims.  This interface should be part of a process management system that has the ability to connect to various legacy back-end systems as well as SaaS applications.  
-  - NexGen chose and implemented Oracle Integration Cloud.  This eliminates many manual, error-prone steps as well as provides great flexibility for the future
+  - NexGen chose and implemented **Oracle Integration Cloud**.  This eliminates many manual, error-prone steps as well as provides great flexibility for the future
 -  Enter into a series of partnerships with service firms who can take care of repairs for certain product lines.  These partners are expected to represent NexGen by completing the repair and updating ticket statuses as if the product were repaired or replaced directly by NexGen
   - After performing extensive research, NexGen chose API Platform Cloud Service which is the only solution that provides complete support for the API Management lifecycle
-  - Using API Platform Cloud Service, NexGen will provide an API to partners to be able to query and update Service Tickets. 
+  - Using **API Platform Cloud Service**, NexGen will provide an API to partners to be able to query and update Service Tickets. 
     - This API will give the partner the necessary access without having to add the partner to back-end/SaaS applications like Oracle Service Cloud.
     - Some of the partners have their own ticketing system which they will be able to integrate with the API that NexGen will provide
     - Through this process, NexGen discovered that it would be a great ideal to implement a microservice to handle query requests.  NexGen may want to in the future provide a mobile app to their customers and they realize that customers may check the status of their warranty claim quite often.  They want to offload that query traffic to a microservice.
