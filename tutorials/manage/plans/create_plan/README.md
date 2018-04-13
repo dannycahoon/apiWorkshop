@@ -1,7 +1,7 @@
 # Creating a Plan
 An API Plan governs access of an Application to an API whenever the API is enforcing the use of an application key.  It is important to understand that some APIs might not enforce the use of an application key which while the API could be entitled into a plan, all usage would be tracked under the *Unknown Application*.  
 
-APIs that use the *Key Validation* policy, require an application key for an application that is entitled to a plan that the API is also entitled to.
+APIs that use the *Key Validation* policy, require an application key for an application that is entitled to a plan that the API is also entitled to.  The plan is the "meeting place" of APIs to Applications, and a plan provides the ability to define limits according to a client (application) across a collection of APIs
 
 ## Before you begin
 - You have an API Platform environment.  See [environments](../../../environments/README.md) for details on procuring an API Platform environment.

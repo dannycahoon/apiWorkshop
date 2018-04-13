@@ -24,10 +24,11 @@ This is often referred to as "Creating an API", however there are many component
 
 Once your API is created, you will see it in the list of APIs.  Go ahead and click on the API name to continue editing it.
 
-#### Select the specification (optional)
+#### Select the specification
+> Note: If you are using the *Apiary Free* plan, this option won't be available to you.  An API to be linked to the implementation must belong to a team.  If your API is not owned by a team in Apiary, then you can skip this step.
+
 On the API Specification tab (left-hand side), you can choose your API design that you created in Apiary during the [Designing an API](../../design/design_api) lab.  
 
-> You must have an Apiary team in order to link to the specification directly.  If you are using the free Apiary developer account, you can skip this step
  
 #### Select and configuration implementation policies
 On the API Implementation tab (left-hand side), you will be presented with a request and a response pipeline.  Beginning with the request pipeline, you will see an *API Request* and a *Service Request*.  
@@ -53,12 +54,13 @@ To configure the API Request:
   1. Once you are finished, click *Apply*
 
 ##### Configure the Service Request
-The service request is the URL at which your back-end service receives requests. When a request meets all policy conditions, the gateway routes the request to this URL and calls your service.
+The service request is the URL or end-point at which your back-end service receives requests. When a request meets all policy conditions, the gateway routes the request to this URL and calls your service.
 
 The service request URL can point to any of your service’s resources, not just its base URL. This way you can restrict users to access only a subset of your API’s resources.
 
-To configure the service request:
-1. Hover over the Service Request policy, and then click Edit.
+To configure the service request, first, Hover over the Service Request policy, and then click Edit.
+
+You can either enter the URL directly, or reference an existing service.  If this is your first API, go ahead and just enter the URL directly.
 1. Policy Dialog, choose to enter a URL:
   1. Enter the Apiary Mock Service URL from [Designing an API](../../design/design_api) in the back-end Service URL field.
   1. Remove the “/tickets” from the mock-service URL so the API can be designed to call multiple end-points such as “/incidents”
@@ -67,8 +69,17 @@ To configure the service request:
 1. Click Apply.
 1. Click Save Changes.
 
+###### Referencing a Service
+In API Platform, you can also register your services.  This is ideal for cases where you may want to reference a service for multiple APIs, or you have different members handling the back-end services vs. APIs.  By registering your back-end service end-point as a service in API Platform, you can provide API Managers the ability to reference it in an API, yet not see the actual end-point.
+
+You can also attach a service account to the service if you want to provide authenticated access, but not share the actual credentials
+
+If you wanted to use an already created service, you would simply select it from the list of services that are available to you.
+
+If you just creating your first API, just entering in the URL directly is fine.
+
 ## Understanding the Request and Response Flow
-In this lab, you simply configured the request flow.  In the policy definition, you will see *Request* and *Response* head tabs.
+In this tutorial, you simply configured the request flow.  In the policy definition, you will see *Request* and *Response* head tabs.
 
 Click the Response tab to view a top-down visual representation of the response flow. You will notice the available policies change as well.  The Service and API Response entries cannot be edited.
 

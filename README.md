@@ -54,7 +54,7 @@ It is best to provision your own instance using GSE, trial or other means, but w
 The *PM demo instance* is the simplest to use, but you should be aware that anybody can use it!  You need to come up with a way to segment your attendees work.
 
 If you plan to use the *PM demo instance*, you will need to assign a sequence number to each attendee.  Each attendee will append this sequence to the username and to the password.  For example an attendee who has been assigned the sequence number of "1",  would log in as Follows:
-- User: api-manager-user-**1**
-- Password: OracleiPa$$Us3r**1** 
+- User: api-manager-user-1
+- Password: OracleiPa$$Us3r1
 
 > Note: You should come up with an additional string to further segment the work in your event, such as the city/location, etc.  For Example, if I were presenting this in Orlando and their student sequence, I might advise my students to add "Orlando" (e.g. TicketService**Orlando1**)

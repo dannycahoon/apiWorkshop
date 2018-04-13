@@ -42,5 +42,3 @@ An API can be active or inactive.  If the API is inactive, then it won't be able
 In this lab, you learned how to:
   - Entitle an API to a Plan
   - Publish the Entitlement
-
-

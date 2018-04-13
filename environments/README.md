@@ -40,7 +40,7 @@ When you create a request policy, you need to make sure you differentiate it.  W
 ## GSE Demo Central
 GSE provides the capabilities to set up API Platform for short-term demos.
 
-Use demo.oracle.com.  Select "UCM with Classic Focus".  That will set up a cloud domain, which you can provision API Platform CS management Service.
+Use http://demo.oracle.com.  Select "UCM with Classic Focus".  That will set up a cloud domain, which you can provision API Platform CS management Service.
 
 You can also provision an IaaS Compute to install the gateway.
 
