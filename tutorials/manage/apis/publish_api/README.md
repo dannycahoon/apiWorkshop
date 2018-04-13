@@ -42,7 +42,7 @@ To publish the API:
 #### Concept Check
 If we can simply include the documentation link, why do we have the option to link a specification?
 
-> A feature of Apiary teams is to be able to collaborate on APIs among a team, but that you do not want to share with the rest of the world.  When you link the Apiary design in API Platform, you then use API Platofrm's robust granting system to manage who can access your documentation, ensuring only the right people can learn about and register to use your API.
+> A feature of Apiary teams is to be able to collaborate on APIs among a team, but that you do not want to share with the rest of the world.  When you link the Apiary design in API Platform, you then use API Platform's robust granting system to manage who can access your documentation, ensuring only the right people can learn about and register to use your API.
 
 ### Publish to the Portal
 Save your changes, then click *Publish to Portal*

@@ -294,7 +294,6 @@ Add the groovy policy as follows:
   
 Go ahead and re-deploy your API with your new changes.
 
-
 ### Invoke the API
 Now that you have successfully added policies to your API, you can send requests to ensure the policies work as intended.  You have already invoked your API, so return to your favorite REST client and invoke the API again.  You can revisit the [Invoke the API](#invoke-the-api) portion of this lab.
   
@@ -319,9 +318,18 @@ Follow [Publishing an API](../../tutorials/manage/apis/publish_api) to publish y
 
 - When selecting your end-point, be aware if you are using a shared environment, you may need to modify it to keep it unique.
 
-### Entitle the API to a plan
+### Creating an API Plan
 Now your API is published to the developer portal, consumers can learn about it, but it needs to be entitled to a plan in order for consumers to register to use it.
 
+API Plans represent the intersection of APIs and Applications.  Both the API and the Application are entitled to a plan.  
+
+Before we can entitle an API, we need the *Service Manager* to create the plan.
+
+> Note: If you are using the *PM Demo* environment, you can skip this step and just choose *Developer Plan* when you entitle the API.  You of course can create your own plan, but you would need to make sure you provide the sequence like you do with API names, etc.
+
+Follow [Creating a Plan](../../tutorials/manage/plans/create_plan) to create a new Plan for your APIs.
+
+### Entitle the API to a plan
 When you added the *Key Validation* policy (in draft), you completed the initial step to control access to the API by requiring application(s) to be entitled to call the API.  Later, you will activate that policy requiring your consumers identify their calls with a registered application in order to call your API.  That API must be entitled with a plan and the application will also be entitled with to a plan that entitles the API.  The the association of Applications to APIs are accomplished through plans.
 
 Entitling applications to call APIs, requires two primary tasks.
@@ -331,7 +339,7 @@ Entitling applications to call APIs, requires two primary tasks.
   - To select an existing plan, the plan manager needs to have given you the *Entitle* grant
 1. Create an (or select an existing) application and entitle that application to the plan
   - As an *API Manager* or an *App Developer* you can create applications.
-
+  
 Follow [Entitle an API to a Plan](../../tutorials/manage/apis/entitle_api) to entitle your API to *DeveloperPlan*
 
 #### Register App

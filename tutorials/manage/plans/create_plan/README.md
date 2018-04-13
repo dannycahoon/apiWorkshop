@@ -21,7 +21,7 @@ APIs that use the *Key Validation* policy, require an application key for an app
  
 1. Provide a name such as _DeveloperPlan_ and a version for your plan.  You can also provide a description.
  
-> If you are using a shared environment, your Plan may already be created.  You can elect to modify the name such as add your initials so you know which Plan is yours
+> If you are using a shared environment, make sure you are using a sequence to keep your plan name unique.
 
 Once your plan is created, you will see it in the list of plans.  Go ahead and click on the plan name to continue editing it.
 
