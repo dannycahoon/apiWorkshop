@@ -6,6 +6,8 @@ A service captures the end-point of the Service Implementation of your API.  You
 - You should have a service end-point, either one that you have set up already, or you can complete the tutorial [Designing an API](../../design/design_api) which will provide you with a mock-service
 - Optional: You can set up your own instance of the *TicketService* [microservice](../../../docker/compose/ticketService) or use the *Hosted TicketService Instance* that you can learn more about [here](../../../docker/compose/ticketService/README.md#hosted-version) 
 
+> Note: If this is your first time trying this tutorial, we recommend you use the hosted instance.
+
 ## Creating the Service
 ### Log into API Platform Cloud Service
 1. Point your browser to the management portal URL as described in your chosen environment. 
