@@ -4,6 +4,7 @@ A service captures the end-point of the Service Implementation of your API.  You
 ## Before you begin
 - You have an API Platform environment.  See [environments](../../../environments/README.md) for details on procuring an API Platform environment.
 - You should have a service end-point, either one that you have set up already, or you can complete the tutorial [Designing an API](../../design/design_api) which will provide you with a mock-service
+- Optional: You can set up your own instance of the *TicketService* [microservice](../../../docker/compose/ticketService) or use the *Hosted TicketService Instance* that you can learn more about [here](../../../docker/compose/ticketService/README.md#hosted-version) 
 
 ## Creating the Service
 ### Log into API Platform Cloud Service
@@ -20,7 +21,7 @@ A service captures the end-point of the Service Implementation of your API.  You
  
 1. Provide a name such as _TicketServiceImpl_ and a version for your Service.  You can also provide a description.
 1. Choose your Service Type
-1. Set the Endpoint name to identify your end-point
+1. Set the End-point name to identify your end-point
 1. Enter the URL of the actual service implementation.  Note the following:
   1. When a request is received, API Platform will accept any resource and will append it onto the Service end-point to call the service.
   1. Bear in mind that if you add a resource to the service *Endpoint URL* that all requests will start with that resource and continue from there.  This could limit the available resources your consumers may access.
