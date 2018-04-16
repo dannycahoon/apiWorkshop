@@ -522,4 +522,14 @@ To view analytics for all APIs deployed to a gateway:
 1. Click Development Gateway.
 1. Click the Analytics tab.
 
+## Conclusion
+Throughout this scenario, you learned how to:
+1. Design an API
+1. Create an API Policy Enforcement Implementation
+1. Document and Publish an API for consumption
+1. Add an API into an appropriate API Plan
+
 Congratulations on finishing this part of the lab!  Now let’s go have some fun!
+
+## Extras
+We encourage you to keep learning!  Visit the [tutorials](../../tutorials) to discover what other exercises you can try out!
