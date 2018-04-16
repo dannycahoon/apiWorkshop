@@ -394,8 +394,21 @@ Up until now, your API has simply invoked the mock-service, but now it is time t
 
 > Note: [Creating a Service](../tutorials/manage/services/create_service/README.md) will reference the option to deploy your own instance of the microservice.  If this is your first time using this lab, we recommend that you simply use the hosted version of the microservice.
 
+1. Open your API and choose the *Implementation* side-tab.
+1. Edit the *Service Request* policy
+1. Switch the *Service* radio-button to *Select Existing* and click the *Select Service >* button.
+1. Choose the service you want to use.
+
+Make sure to save your API.
+
+### Re-deploy your API
+Go ahead and re-deploy your API.  Visit [Deploying an API](../../tutorials/manage/apis/deploy_api) if you need a refresher.
+
+### Invoke your API
+It is a good idea once your API is re-deployed to invoke it so you can confirm that everything is working properly with the back-end service.
+
 ### Activate Draft Policies
-Return to your API Implementation, edit the draft policies and save them
+Now that you have confirmed everything is working, Return to your API Implementation, edit the draft policies and save them.  Then save your API.
 
 ### Re-deploy your API
 You need to re-deploy your API to activate the key validation and application rate limiting policies you just added.  Visit [Deploying an API](../../tutorials/manage/apis/deploy_api) if you need a refresher.
