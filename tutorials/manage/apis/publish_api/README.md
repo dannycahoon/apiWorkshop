@@ -12,7 +12,7 @@ In this exercise, you will learn about:
 - Publishing, Re-Publishing, and Un-Publishing
 
 ## Before you begin
-- You have an API Platform environment.  See [environments](../../../environments/README.md) for details on procuring an API Platform environment.
+- You have an API Platform environment.  See [environments](../../../../environments/README.md) for details on procuring an API Platform environment.
 - You have completed the tutorial [Creating an API Policy Implementation](../create_api)
   - You have the credentials of the user who created the API or a user who has the appropriate grants to *Manage* the API.  See [API Grants](../grant_api) if you need to grant access.
   

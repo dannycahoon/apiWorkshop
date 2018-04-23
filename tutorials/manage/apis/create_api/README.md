@@ -3,7 +3,7 @@ This is often referred to as "Creating an API", however there are many component
 
 ## Before you begin
 1. You have an API Platform environment.  See [environments](../../../../environments/README.md) for details on procuring an API Platform environment.
-1. You have completed the tutorial [Designing an API](../../design/design_api)
+1. You have completed the tutorial [Designing an API](../../../design/design_api)
 
 ## Creating the API
 ### Log into API Platform Cloud Service
@@ -27,7 +27,7 @@ Once your API is created, you will see it in the list of APIs.  Go ahead and cli
 #### Select the specification
 > Note: If you are using the *Apiary Free* plan, this option won't be available to you.  An API to be linked to the implementation must belong to a team.  If your API is not owned by a team in Apiary, then you can skip this step.
 
-On the API Specification tab (left-hand side), you can choose your API design that you created in Apiary during the [Designing an API](../../design/design_api) lab.  
+On the API Specification tab (left-hand side), you can choose your API design that you created in Apiary during the [Designing an API](../../../design/design_api) lab.  
 
  
 #### Select and configuration implementation policies
@@ -62,7 +62,7 @@ To configure the service request, first, Hover over the Service Request policy, 
 
 You can either enter the URL directly, or reference an existing service.  If this is your first API, go ahead and just enter the URL directly.
 1. Policy Dialog, choose to enter a URL:
-  1. Enter the Apiary Mock Service URL from [Designing an API](../../design/design_api) in the back-end Service URL field.
+  1. Enter the Apiary Mock Service URL from [Designing an API](../../../design/design_api) in the back-end Service URL field.
   1. Remove the “/tickets” from the mock-service URL so the API can be designed to call multiple end-points such as “/incidents”
 1. Leave the Service Account as None
 1. If your gateway is behind your corporate firewall, then you will need to make sure that the *Use Gateway Node Proxy* is checked.

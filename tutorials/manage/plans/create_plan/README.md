@@ -4,13 +4,13 @@ An API Plan governs access of an Application to an API whenever the API is enfor
 APIs that use the *Key Validation* policy, require an application key for an application that is entitled to a plan that the API is also entitled to.  The plan is the "meeting place" of APIs to Applications, and a plan provides the ability to define limits according to a client (application) across a collection of APIs
 
 ## Before you begin
-- You have an API Platform environment.  See [environments](../../../environments/README.md) for details on procuring an API Platform environment.
+- You have an API Platform environment.  See [environments](../../../../environments/README.md) for details on procuring an API Platform environment.
 
 ## Create your plan
 ### Log into API Platform Cloud Service
 1. Point your browser to the management portal URL as described in your chosen environment. 
 
-> This URL is based on the [environment](../../../environments/README.md) that you have selected but it will take the form of `http(s)://<host>:<port>/apiplatform`
+> This URL is based on the [environment](../../../../environments/README.md) that you have selected but it will take the form of `http(s)://<host>:<port>/apiplatform`
 
 1.  Log in as a user that has the *Plan Manager* role.  
 
@@ -40,4 +40,4 @@ In this tutorial you learned the following:
   * How to specify which gateway(s) the plan can be deployed
 
 #### Next Steps
- - [Entitling an API](../entitle_api)
+ - [Entitling an API](../../apis/entitle_api)

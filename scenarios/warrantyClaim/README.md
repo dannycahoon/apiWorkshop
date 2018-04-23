@@ -74,7 +74,7 @@ See [Invoking an API](../../tutorials/manage/apis/invoke_api/README.md) if you n
 ##### Invoke the API
 Choose your favorite REST client.  For this exercise, you could simply use a web-browser because it is a simple _GET_ request. 
 
-- Use *Load Balancer URL* (see [Invoking an API](../../manage/apis/invoke_api) for how to get the Load Balancer URL if you don't already know how to do this)
+- Use *Load Balancer URL* (see [Invoking an API](../../tutorials/manage/apis/invoke_api/README.md) for how to get the Load Balancer URL if you don't already know how to do this)
   - _Example: http://`<host>`:`<port>`/ticketService/1/tickets_
 - Verb: GET
 - Headers (optional):

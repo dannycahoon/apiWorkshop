@@ -2,8 +2,8 @@
 An API must be deployed to a gateway.  After successfully deploying the API, it receives requests at the endpoint you've configured and routes successful requests to the backend service. 
 
 ## Before you begin
-- You have an API Platform environment.  See [environments](../../../environments/README.md) for details on procuring an API Platform environment.
-- You have completed the tutorial [Creating an API Policy Implementation](../../manage/create_api)
+- You have an API Platform environment.  See [environments](../../../../environments/README.md) for details on procuring an API Platform environment.
+- You have completed the tutorial [Creating an API Policy Implementation](../create_api)
   - You have the credentials of the user who created the API or a user who has the appropriate grants to *Deploy* or *Manage* the API.
 - Your environment has at least one gateway deployed and the user who will deploy the API to the gateway has the  appropriate grant to [request deployments](../../gateways/grants) to that gateway.  Typically a user with the *API Manager* role
 - You have the credentials of the user who can [deploy to the gateway](../../gateways/grants).  Typically a user with the *Gateway Manager* role.
