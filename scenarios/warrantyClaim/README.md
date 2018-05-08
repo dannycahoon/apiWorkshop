@@ -45,12 +45,17 @@ As you progress through this use-case, you will need to gain access to Oracle AP
 Design is critical as a first step for great APIs.  Collaboration ensures that we are creating the correct design.  We need our API to be well documented and we need to create a mock service in order to rapidly prototype our API
 - Follow the [Designing an API](../../tutorials/design/design_api) tutorial, to Design your API
 
+  `Suggestion: Open links in a new tab so you can easily return to this tab once your are finished designing your API.  To do this, right-click the link and select **Open in New Tab**`
+
 Now you have an API Design that all of your stakeholders clearly understand and have agreed to.  Your engineering teams can leverage the mock service as they develop their respective components.  You know that this will ultimately be made available to partners, so you want to get started on the policy enforcement implementation
 
 ### Creating an API Policy Implementation
 A great API extends beyond just a simple REST service by providing a managed end-point for only approved users to gain access under a proper SLA.  To create this managed end-point, we will begin with creating an API Policy Implementation
 
-- Follow the [Creating an API Policy Implementation](../../tutorials/manage/apis/create_api) tutorial to create your API.  In this tutorial, you will:
+- Follow the [Creating an API Policy Implementation](../../tutorials/manage/apis/create_api) tutorial to create your API.  
+
+
+In this tutorial, you will:
   - Sign in as an API Manager
   - Create an API
   - Configure the *API Request* and *Service Request* Endpoints
@@ -59,6 +64,7 @@ At this point, you have a simple API Policy Implementation that provides the *pr
 
 - Follow the [Deploying an API](../../tutorials/manage/apis/deploy_api) tutorial to deploy your API
   - Be aware that you may need to apply certain grant(s) to your gateway.  If so, follow the [Managing Access Grants on Gateways](../../tutorials/manage/gateways/grants)
+
 
 Depending on your needs, an API manager can create the API Implementations and another person will handle the deployment to a gateway.  This makes the most sense in the case of a production gateway where you want to restrict access to deployments.
 
@@ -83,7 +89,7 @@ Choose your favorite REST client.  For this exercise, you could simply use a web
 
 Because you have not applied any policies, the request is passed to the backend service without further validation.  This is simply the “proxy pattern”. You should have received a response similar to the following. 
 
-```
+```json
         {
               "_items": [
                 {
