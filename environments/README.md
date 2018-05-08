@@ -26,10 +26,14 @@ An environment that is always patched and used for general demos.  Easiest to be
 
 To learn more, visit [PM Demo Environment Details](./pmDemo.md)
 
+>Note: Whenever there is a link, open it in a new tab (right-click->"Open Link in New Tab").  This way you will maintain your place this lab guide without having to re-orient yourself after completing a task from a linked tutorial, etc
+
 ## GSE Demo Central
 An environment that is provisioned to you under demo.oracle.com.  This is a short-term environment, that does require you to set up your gateway, but you have much more control and can dig deeper into API Platform CS.
 
 To learn more, visit [GSE Demo Central](./gseDemo.md)
+
+>Note: Whenever there is a link, open it in a new tab (right-click->"Open Link in New Tab").  This way you will maintain your place this lab guide without having to re-orient yourself after completing a task from a linked tutorial, etc
 
 ## Internal environment options (Oracle Employees only)
 There are some environment options available internally to Oracle Employees that require VPN access.  

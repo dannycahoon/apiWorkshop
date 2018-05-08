@@ -46,7 +46,7 @@ If you are in an instructor-led event, your instructor may guide you on what env
 
 To learn more about the available environments, visit [API Platform Demo Environments](../../environments/README.md)
 
-`Note: Whenever there is a link, open it in a new tab (right-click->"Open in New Tab").  This way you will maintain your place this lab guide without having to re-orient yourself after completing a task from a linked tutorial, etc`
+>Note: Whenever there is a link, open it in a new tab (right-click->"Open Link in New Tab").  This way you will maintain your place this lab guide without having to re-orient yourself after completing a task from a linked tutorial, etc
 
 
 ### Design the API
