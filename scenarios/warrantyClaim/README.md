@@ -39,13 +39,19 @@ This series of learning paths and tutorials will primarily leverage the *API* po
 Now that you understand NexGen's use-case above, here are the project requirements below that you received from your project manager.
 
 ### Before you begin
-As you progress through this use-case, you will need to gain access to Oracle API Platform Cloud Service and Oracle Apiary Cloud Service.  At the point of the tutorial where you will need access, the tutorial will advise you.  If you want to begin preparing ahead of time, you can [check out the options](../../environments) and decide which option makes sense for you.
+As you progress through this use-case, you will need to gain access to Oracle API Platform Cloud Service and Oracle Apiary Cloud Service.  At the point of the tutorial where you will need access, the tutorial will advise you.  
+
+### Choose your Environment
+If you are in an instructor-led event, your instructor may guide you on what environment you are using.  If you are accessing this on your own, you will need to make the choice.
+
+To learn more about the available environments, visit [API Platform Demo Environments](../../environments/README.md)
+
+`Note: Whenever there is a link, open it in a new tab (right-click->"Open in New Tab").  This way you will maintain your place this lab guide without having to re-orient yourself after completing a task from a linked tutorial, etc`
+
 
 ### Design the API
 Design is critical as a first step for great APIs.  Collaboration ensures that we are creating the correct design.  We need our API to be well documented and we need to create a mock service in order to rapidly prototype our API
 - Follow the [Designing an API](../../tutorials/design/design_api) tutorial, to Design your API
-
-  `Suggestion: Open links in a new tab so you can easily return to this tab once your are finished designing your API.  To do this, right-click the link and select **Open in New Tab**`
 
 Now you have an API Design that all of your stakeholders clearly understand and have agreed to.  Your engineering teams can leverage the mock service as they develop their respective components.  You know that this will ultimately be made available to partners, so you want to get started on the policy enforcement implementation
 
