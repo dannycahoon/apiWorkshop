@@ -5,10 +5,6 @@ This is often referred to as "Creating an API", however there are many component
 1. You have an API Platform environment.  See [environments](../../../../environments/README.md) for details on procuring an API Platform environment.
 1. You have completed the tutorial [Designing an API](../../../design/design_api)
 
-### How-to Video
-If you choose, you can watch a demo of this tutorial being completed.
-![create_api](https://stbeehive.oracle.com/content/dav/st/API%20PLATFORM/Public%20Documents/my.o/tutorials/create_api.mp4)
-
 ## Creating the API
 ### Log into API Platform Cloud Service
 1. Point your browser to the management portal URL as described in your chosen environment. 
