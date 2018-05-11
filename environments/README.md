@@ -21,10 +21,10 @@ Once you have made your selection and have access to your environment, you may w
 ## Choosing which environment you will use
 If you are in an instructor-led event, your instructor may advise you which environment you may use.  The available options are
 
-### PM Demo Environment
+### Demo/Training Environment
 An environment that is always patched and used for general demos.  Easiest to begin using, but there are limits as this is a shared environment.  This is a great option for first-time users or for quick demos.
 
-To learn more, visit [PM Demo Environment Details](./pmDemo.md)
+To learn more, visit [Demo/Training Environment Details](./pmDemo.md)
 
 >Note: Whenever there is a link, open it in a new tab (right-click->"Open Link in New Tab").  This way you will maintain your place this lab guide without having to re-orient yourself after completing a task from a linked tutorial, etc
 

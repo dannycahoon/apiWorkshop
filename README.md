@@ -35,7 +35,7 @@ When conducting and instructor-led event, there are a few steps that you need to
 
 ### Pre-event setup
 1. Choose the environment you will use for your training event
-  1. You can visit ./environments to learn about the options
+  1. You can visit [Environments](./environments) to learn about the options
   1. Create a ppt, or other medium that provides an overview of API Platform and this training.
     1. In your ppt, you can include the getting *Accessing Content* section below, or plan to either write it up a whiteboard, etc, or pull up this page to present to your audience.
   
@@ -48,7 +48,7 @@ When conducting and instructor-led event, there are a few steps that you need to
     1. Log in as user: *apipartner*
     1. The password is: *Aut0nomou5!* (Aut-zero-nomou-five-!)
 
-#### Using the PM Demo Instance
+#### Using the Demo/Training Instance
 It is best to provision your own instance using GSE, trial or other means, but we do maintian a *PM demo instance*
 
 The *PM demo instance* is the simplest to use, but you should be aware that anybody can use it!  You need to come up with a way to segment your attendees work.

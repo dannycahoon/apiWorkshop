@@ -58,15 +58,12 @@ Now you have an API Design that all of your stakeholders clearly understand and 
 ### Creating an API Policy Implementation
 A great API extends beyond just a simple REST service by providing a managed end-point for only approved users to gain access under a proper SLA.  To create this managed end-point, we will begin with creating an API Policy Implementation
 
+
 - Follow the [Creating an API Policy Implementation](../../tutorials/manage/apis/create_api) tutorial to create your API.  
 
+>Note: Whenever there is a link, open it in a new tab (right-click->"Open Link in New Tab").  This way you will maintain your place this lab guide without having to re-orient yourself after completing a task from a linked tutorial, etc
 
-In this tutorial, you will:
-  - Sign in as an API Manager
-  - Create an API
-  - Configure the *API Request* and *Service Request* Endpoints
-
-At this point, you have a simple API Policy Implementation that provides the *proxy pattern*.  The *proxy pattern is simply one end-point that receives a request and routes that request to another end-point.  Of course, you only have the API defined, it is not running anywhere! 
+At this point, you have a simple API Policy Implementation that provides the *proxy pattern*.  The *proxy pattern* is simply one end-point that receives a request and routes that request to another end-point.  Of course, you only have the API defined, it is not running anywhere! 
 
 - Follow the [Deploying an API](../../tutorials/manage/apis/deploy_api) tutorial to deploy your API
   - Be aware that you may need to apply certain grant(s) to your gateway.  If so, follow the [Managing Access Grants on Gateways](../../tutorials/manage/gateways/grants)
@@ -337,7 +334,7 @@ API Plans represent the intersection of APIs and Applications.  Both the API and
 
 Before we can entitle an API, we need the *Service Manager* to create the plan.
 
-> Note: If you are using the *PM Demo* environment, you can skip this step and just choose *Developer Plan* when you entitle the API.  You of course can create your own plan, but you would need to make sure you provide the sequence like you do with API names, etc.
+> Note: If you are using the *Demo/Training* environment, you can skip this step and just choose *Developer Plan* when you entitle the API.  You of course can create your own plan, but you would need to make sure you provide the sequence like you do with API names, etc.
 
 Follow [Creating a Plan](../../tutorials/manage/plans/create_plan) to create a new Plan for your APIs.
 
@@ -401,7 +398,7 @@ The Documentation tab embeds the documentation reference you specified on the Ge
 ### Connect your API to the actual REST back-end service
 Up until now, your API has simply invoked the mock-service, but now it is time to connect it to the actual REST back-end service.  Here you have a few options.
 
-1. If you are using the *PM Demo Environment* then you can simply use the existing *ServiceTicketImpl* service.
+1. If you are using the *Demo/Training Environment* then you can simply use the existing *ServiceTicketImpl* service.
 1. If you are using a different environment, or you simply want to explore the role of the *Service Manager*, then you can follow [Creating a Service](../tutorials/manage/services/create_service/README.md)
 
 > Note: [Creating a Service](../tutorials/manage/services/create_service/README.md) will reference the option to deploy your own instance of the microservice.  If this is your first time using this lab, we recommend that you simply use the hosted version of the microservice.
