@@ -24,8 +24,9 @@ We plan to record each tutorial in a short screencast so that if you need to see
 If you have any questions about these tutorials or API Platform CS, follow the path below:
 
 ### Oracle Employees
-1. Visit http://my.oracle.com/go/apipcs for a wealth of information about API Platform CS
+1. Visit http://my.oracle.com/go/apipcs (VPN required) for a wealth of information about API Platform CS
 1. Use the FAQ that you will find on the above site.
+1. If your questions is not answered, then use the distribution list, also at the above site.
 
 ### Non-Oracle Employees
 1. In the Developer Cloud Service instance where you are accessing this content, navigate to Issues.  Create a new Issue, describing your issue/question.  Make sure you provide your e-mail address in the description and assign the issue to *Robert Wunderlich*
@@ -41,7 +42,7 @@ When conducting and instructor-led event, there are a few steps that you need to
   
 ### Kick-off the event
 1. Introduce API Platform and the training
-1. If you chose the 
+  1. If you chose the *Demo/Training Instance*, you should assign sequence numbers to your attendees.  Bear in mind that they may need to add additional identifiers to properly separate their work.
 1. Direct your attendees to scenario in Developer Cloud Service by completing the following:
   1. Point your browser to: http://bit.ly/APIWarrantyClaim
     1. When asked for the domain, enter: *partnerpaas18*
