@@ -1,0 +1,20 @@
+# Installing a Gateway Node
+
+> This tutorial is under construction
+
+This tutorial shows you how you can download, install and configure a gateway node.
+
+## Before you begin
+
+### Required
+- You have an API Platform environment.  See [environments](../../../environments/README.md) for details on procuring an API Platform environment.
+- You have the following credentials
+  - Username and password, for user(s) who have the *Gateway Manager* and *Gateway Runtime* Application role.  These are typically separate users as a best practice.
+  - client_id and secret for the `APICSAuto_<domain>` application
+- You can follow ../../users/entitle_users/README.md if you need to add users to the *Gateway Manager* and the *Gateway Runtime* application role
+
+
+  
+
+
+
