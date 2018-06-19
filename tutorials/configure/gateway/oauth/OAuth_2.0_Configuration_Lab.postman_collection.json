@@ -1,0 +1,457 @@
+{
+	"info": {
+		"_postman_id": "fab2e81c-576e-48e9-900d-20626678b89e",
+		"name": "OAuth 2.0 Configuration Lab",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Token from IDCS (MyScopes)",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{client_secret}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{client_id}}",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"type": "any"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "urn:opc:idm:__myscopes__",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{idcs_url}}/oauth2/v1/token",
+					"host": [
+						"{{idcs_url}}"
+					],
+					"path": [
+						"oauth2",
+						"v1",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Token from IDCS (Create)",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{client_secret}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{client_id}}",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"type": "any"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "{{audience}}{{scope_create}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{idcs_url}}/oauth2/v1/token",
+					"host": [
+						"{{idcs_url}}"
+					],
+					"path": [
+						"oauth2",
+						"v1",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Token from IDCS (Read)",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{api_client_secret}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{api_client_id}}",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"type": "any"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "{{audience}}{{scope_read}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{idcs_url}}/oauth2/v1/token",
+					"host": [
+						"{{idcs_url}}"
+					],
+					"path": [
+						"oauth2",
+						"v1",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Token from IDCS (Update)",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{api_client_secret}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{api_client_id}}",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"type": "any"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "{{audience}}{{scope_update}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{idcs_url}}/oauth2/v1/token",
+					"host": [
+						"{{idcs_url}}"
+					],
+					"path": [
+						"oauth2",
+						"v1",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve IDCS Signing Certificate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ4NXQjUzI1NiI6IjBseUdIeGpYaUh5bzlvTjZhbTJkbDhwX1ZvUHNwSndWLUFwdHMzVVhjc00iLCJ4NXQiOiJ5Qy1FcUZfYi1ZUGFwamVnZ2tLWDBTRTVhTnciLCJraWQiOiJTSUdOSU5HX0tFWSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiI3MTMyRTY5RjdCQ0Y0NUI1QTgwQUYzMTA2NDc5ODVGMF9BUFBJRCIsInVzZXIudGVuYW50Lm5hbWUiOiJpZGNzLTJjMTc5Y2QwZjkwYTQ2ZTZhZWM5NWQ1ODk0OWZmM2Q5Iiwic3ViX21hcHBpbmdhdHRyIjoidXNlck5hbWUiLCJpc3MiOiJodHRwczpcL1wvaWRlbnRpdHkub3JhY2xlY2xvdWQuY29tXC8iLCJ0b2tfdHlwZSI6IkFUIiwiY2xpZW50X2lkIjoiNzEzMkU2OUY3QkNGNDVCNUE4MEFGMzEwNjQ3OTg1RjBfQVBQSUQiLCJ1c2VyX2lzQWRtaW4iOnRydWUsImF1ZCI6WyJ1cm46b3BjOmxiYWFzOmxvZ2ljYWxndWlkPWlkY3MtMmMxNzljZDBmOTBhNDZlNmFlYzk1ZDU4OTQ5ZmYzZDkiLCJodHRwczpcL1wvaWRjcy0yYzE3OWNkMGY5MGE0NmU2YWVjOTVkNTg5NDlmZjNkOS5pZGVudGl0eS5vcmFjbGVjbG91ZC5jb20iXSwic3ViX3R5cGUiOiJjbGllbnQiLCJjbGllbnRBcHBSb2xlcyI6WyJVc2VyIEFkbWluaXN0cmF0b3IiLCJHbG9iYWwgVmlld2VyIiwiQXV0aGVudGljYXRlZCBDbGllbnQiLCJNZSIsIklkZW50aXR5IERvbWFpbiBBZG1pbmlzdHJhdG9yIiwiU2VjdXJpdHkgQWRtaW5pc3RyYXRvciJdLCJzY29wZSI6InVybjpvcGM6aWRtOmcuaWRlbnRpdHlzb3VyY2V0ZW1wbGF0ZV9yIHVybjpvcGM6aWRtOnQuZ3JvdXBzLm1lbWJlcnMgdXJuOm9wYzppZG06dC5hcHAgdXJuOm9wYzppZG06dC51c2VyLmxvY2tlZHN0YXRlY2hhbmdlciB1cm46b3BjOmlkbTp0LmlkYnJpZGdlLmFkbWluIHVybjpvcGM6aWRtOnQuaWRjc3JwdHMgdXJuOm9wYzppZG06dC5yZXF1ZXN0cyB1cm46b3BjOmlkbTp0LnNlY3VyaXR5LmNsaWVudCB1cm46b3BjOmlkbTpnLmFwcHRlbXBsYXRlX3IgdXJuOm9wYzppZG06dC5idWxrLnVzZXIgdXJuOm9wYzppZG06dC5kaWFnbm9zdGljc19yIHVybjpvcGM6aWRtOnQuaWRiX2NvbnRhaW5lcnMgdXJuOm9wYzppZG06dC5pZGJyaWRnZS51c2VyIHVybjpvcGM6aWRtOnQudXNlci5tZSB1cm46b3BjOmlkbTpnLmFsbF9yIHVybjpvcGM6aWRtOnQuaWRicmlkZ2VfciB1cm46b3BjOmlkbTp0Lm1mYV9yIHVybjpvcGM6aWRtOnQudXNlci5zZWN1cml0eSB1cm46b3BjOmlkbTp0Lmdyb3Vwc19yIHVybjpvcGM6aWRtOnQuYXVkaXRfciB1cm46b3BjOmlkbTp0LmpvYi5hcHAgdXJuOm9wYzppZG06dC5vYXV0aGNvbnNlbnRzIHVybjpvcGM6aWRtOnQudXNlcnNfciB1cm46b3BjOmlkbTp0LnNvbWkgdXJuOm9wYzppZG06Zy5zaGFyZWRmaWxlcyB1cm46b3BjOmlkbTp0LnJlcy5pbXBvcnRleHBvcnQgdXJuOm9wYzppZG06dC5qb2IuaWRlbnRpdHkgdXJuOm9wYzppZG06dC5zYW1sIHVybjpvcGM6aWRtOnQubWZhIHVybjpvcGM6aWRtOnQuZGIuYWRtaW4gdXJuOm9wYzppZG06dC5zY2hlbWFzIHVybjpvcGM6aWRtOnQubWZhLnVzZXJhZG1pbiB1cm46b3BjOmlkbTp0Lm9hdXRoIHVybjpvcGM6aWRtOnQuZ3JvdXBzIHVybjpvcGM6aWRtOnQuam9iLmltcG9ydGV4cG9ydCB1cm46b3BjOmlkbTp0LmlkYnJpZGdlLnVubWFwcGVkLmlkY3NhdHRyaWJ1dGVzIHVybjpvcGM6aWRtOnQua3JiLmFkbWluIHVybjpvcGM6aWRtOnQubmFtZWRhcHBhZG1pbiB1cm46b3BjOmlkbTp0LmJsa3JwdHMgdXJuOm9wYzppZG06dC5zZWxmcmVnaXN0cmF0aW9ucHJvZmlsZSB1cm46b3BjOmlkbTp0LmdyYW50cyB1cm46b3BjOmlkbTp0LnVzZXIuYXV0aGVudGljYXRlIHVybjpvcGM6aWRtOnQuYXV0aGVudGljYXRpb24gdXJuOm9wYzppZG06dC5jb250YWluZXIgdXJuOm9wYzppZG06dC5pbWFnZXMgdXJuOm9wYzppZG06dC5idWxrIHVybjpvcGM6aWRtOnQuam9iLnNlYXJjaCB1cm46b3BjOmlkbTp0LmlkYnJpZGdlIHVybjpvcGM6aWRtOnQuc2V0dGluZ3MgdXJuOm9wYzppZG06dC5pZGJyaWRnZS5zb3VyY2VldmVudCB1cm46b3BjOmlkbTp0LmlkYl9jb250YWluZXJzX3IgdXJuOm9wYzppZG06dC5wb2xpY3kgdXJuOm9wYzppZG06dC51c2VycyB1cm46b3BjOmlkbTp0LnJlcG9ydHMgdXJuOm9wYzppZG06Zy5pZGNzcnB0c21ldGFfciB1cm46b3BjOmlkbTp0LmFkYXB0aXZlX3IiLCJjbGllbnRfdGVuYW50bmFtZSI6ImlkY3MtMmMxNzljZDBmOTBhNDZlNmFlYzk1ZDU4OTQ5ZmYzZDkiLCJleHAiOjE1MjkxMDE4ODksImlhdCI6MTUyOTA5ODI4OSwiY2xpZW50X2d1aWQiOiI0YzI1NDY5OTM3MmM0YTVmOTM3MTRiYjU0ZmViMGM0ZSIsImNsaWVudF9uYW1lIjoiQVBJQ1NBVVRPX0FQSURlbW8iLCJ0ZW5hbnQiOiJpZGNzLTJjMTc5Y2QwZjkwYTQ2ZTZhZWM5NWQ1ODk0OWZmM2Q5IiwianRpIjoiMzA2NDA4OGMtNDVhZC00MWM0LTkxYzAtMTJjY2M3ODdlOTYzIn0.lcy1jczMJ4ES3ujAxZFaNBtNDEc_GU6S0tkOXP5Qq3B6JdgewKB3UyekOI02caSzxLIf7GcplJQz0kpS3KXl-UwhoPTPZ-t0O5k_OwTPq2BA9WQZgZ-tW2XRHmrblrMOx5pPjdvoAGvxHgZtu7zwHP1Bx-EXiqbXSmeguKrKzhET44YdiZ-hji1PmknJObqCh0INdE4wHvS8C6livOchlAQGMsNUpYjwZwj18AfxBkuxnpIAu3-WH8w-jQjWmWb442HOxqrJJvueaKPmvsOYyW6zGX_pko44ytWdDFtXlk2GyQ1DyPlKDH3PlcghpjBbfM8xn-J3YVFiksMjLJh4SQ\",\"token_type",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/scim+json,application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{idcs_url}}/admin/v1/SigningCert/jwk",
+					"host": [
+						"{{idcs_url}}"
+					],
+					"path": [
+						"admin",
+						"v1",
+						"SigningCert",
+						"jwk"
+					]
+				},
+				"description": "The certificates are in the \"x5c\" array. The first one is IDCS signing certificate. The second is the CA's."
+			},
+			"response": []
+		},
+		{
+			"name": "Call API (Read)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ4NXQjUzI1NiI6Ijg4em5OWVFaMER2Njl6TUh2UXNiSzA4SmhLaTR6d0RsUUNUV25HbHhVVFUiLCJ4NXQiOiJJUmJtbEQtaFIzWDV2WXhma1N1M2pyenVoM1kiLCJraWQiOiJTSUdOSU5HX0tFWSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIxYmY0ZDNlNTk5ZWM0NDA2YTlmMzMwNDRhNDljNGQ0YyIsInVzZXIudGVuYW50Lm5hbWUiOiJpZGNzLWJhMDI0YjI4NDRiMzQxNGFhMTU1ODE4MzNjZDQ4ODg5Iiwic3ViX21hcHBpbmdhdHRyIjoidXNlck5hbWUiLCJpc3MiOiJodHRwczpcL1wvaWRlbnRpdHkub3JhY2xlY2xvdWQuY29tXC8iLCJ0b2tfdHlwZSI6IkFUIiwiY2xpZW50X2lkIjoiMWJmNGQzZTU5OWVjNDQwNmE5ZjMzMDQ0YTQ5YzRkNGMiLCJhdWQiOiJodHRwOlwvXC8xMjkuMjEzLjQwLjIwOjgwMTFcLyIsInN1Yl90eXBlIjoiY2xpZW50Iiwic2NvcGUiOiJSZWFkIiwiY2xpZW50X3RlbmFudG5hbWUiOiJpZGNzLWJhMDI0YjI4NDRiMzQxNGFhMTU1ODE4MzNjZDQ4ODg5IiwiZXhwIjoxNTI5MzYxMzMxLCJpYXQiOjE1MjkzNTc3MzEsImNsaWVudF9ndWlkIjoiNWNlY2FmNjc5ODE0NGZmZTliNmE2MWQ1NTQ4YzQ1MTAiLCJjbGllbnRfbmFtZSI6IkFQSUNsaWVudCIsInRlbmFudCI6ImlkY3MtYmEwMjRiMjg0NGIzNDE0YWExNTU4MTgzM2NkNDg4ODkiLCJqdGkiOiJhNGU0MDNjNS1hYjZlLTRiOTQtYTdiNC1iZTRkMmFjMDg5ODYifQ.IYR4Mg9scuLV16q_vS-CiS0YtVmqYwFlFqd2Pa6b6Gk8N7KWgy43OrX9rCw7epmBcA89FuYLJ62jir0L5ezPbhvq2xmkYc_YuTiklJZz4i2RAGaNaSVX1siLfeup3fB-jrqys_pQnHGSMQ8wDUD5jC0n9ufs4S5Irzy72xnbSYsFOovDetRGhmOS0p9MdsgOELmT4cHLOSRH0iMrIDZ4aV0i3T3hOh9y_um5dgRgDGfGEVae6xPg9v78d8Ux34MdMUC4yQHGs2IhxbUye_qpf5PGlwiNN33QO9ObZlQGOMwe4li5LWN3XrtnG-j5BuXms1neQT3MeEiPCdIOwiY-pQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{api_endpoint}}",
+					"host": [
+						"{{api_endpoint}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Call API (Create)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer Paste_the_Access_Token_Here"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://gtwy-node.apip.oracle.com:9021/getPosts",
+					"protocol": "http",
+					"host": [
+						"gtwy-node",
+						"apip",
+						"oracle",
+						"com"
+					],
+					"port": "9021",
+					"path": [
+						"getPosts"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "861933fe-e461-4ac6-9374-c419e78b7f93",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "876c3f3b-28d6-40d4-b308-feb334385dc3",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "0cf5352a-cf95-4bca-9c28-a109e9360777",
+			"key": "client_id",
+			"value": "79b000d754974f08b8698c42732df673",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "6e9ef9b6-8e41-4a89-8815-1c06c843d385",
+			"key": "client_secret",
+			"value": "442eda5f-b8ae-44e8-996b-450dd1c301af",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "ccd4577f-6e37-4311-8b0b-a5a2093e5f9d",
+			"key": "idcs_url",
+			"value": "https://idcs-ba024b2844b3414aa15581833cd48889.identity.oraclecloud.com/",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "2972f49c-9fda-43bf-91fc-cfcd87dde812",
+			"key": "scope_create",
+			"value": "Create",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "c6f4940f-04c1-40e5-a9b1-2a098d0a338b",
+			"key": "scope_read",
+			"value": "Read",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "fc320c9f-6dc9-45a0-8fcc-70080fa6f05a",
+			"key": "scope_update",
+			"value": "Update",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "03a650e3-e448-4263-a2b4-ce2100ebb4dc",
+			"key": "audience",
+			"value": "http://129.213.40.20:8011/",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "d922274a-5406-4ca4-af0d-0221a930fef7",
+			"key": "api_client_id",
+			"value": "1bf4d3e599ec4406a9f33044a49c4d4c",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "951034ec-2ce5-4e13-84c0-34d4d2ab37d3",
+			"key": "api_client_secret",
+			"value": "ff2faf67-9785-4975-92d0-cc894b5787b2",
+			"type": "string",
+			"description": ""
+		},
+		{
+			"id": "d4472c48-25aa-4dc9-87e9-8126633263da",
+			"key": "api_endpoint",
+			"value": "http://129.213.40.20:8011/beers/1",
+			"type": "string",
+			"description": ""
+		}
+	]
+}
