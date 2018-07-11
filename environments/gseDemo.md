@@ -1,7 +1,7 @@
 # GSE Demo Central
 GSE provides the capabilities to set up API Platform for short-term demos.
 
-Use http://demo.oracle.com.  Select "UCM with Classic Focus".  That will set up a cloud domain, which you can provision API Platform CS management Service.
+Use http://demo.oracle.com.  Select **UCM with OCI Focus**.  That will set up a cloud domain, which you can provision API Platform CS management Service.
 
 You can also provision an IaaS Compute to install the gateway.
 
