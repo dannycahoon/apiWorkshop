@@ -61,6 +61,7 @@ This lab also includes a Postman collection with the requests pre-configured, if
     - You can name the scopes anything you wish based on the purpose of the application.  At this point we are simply setting up the gateway as a resource server, but in the future an API can differentiate between the scopes.  In this case, we will just set up to test the basic CRUD functions.
   1. Click *Next* and choose *Skip for later* on *Web Tier Policy*
   1. Click *Next* and then check *Finish*
+  1. Make sure you *Activate* your application before using it
 
 > You will get a confirmation that the Application which will display the *Cient ID* and *Client Secret*.  Copy both of these values and store them in your favorite text editor for use later.
 
