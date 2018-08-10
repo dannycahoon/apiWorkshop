@@ -2,7 +2,7 @@
 
 ## Introduction
 
-NexGen is a company that as a wide variety of products.  As a part of selling products, NexGen offers warranty coverage and on occasion, a customer needs to make a claim for service under the warranty agreement.  NexGen management is growing concerned that as their product line increases, the costs of maintaining the warranty fulfillment are growing considerably.  In a recent strategy session, NexGen identified a number of areas that they could improve their warranty claims management.  
+NexGen is a company that has a wide variety of products.  As a part of selling products, NexGen offers warranty coverage and on occasion, a customer needs to make a claim for service under the warranty agreement.  NexGen management is growing concerned that as their product line increases, the costs of maintaining the warranty fulfillment are growing considerably.  In a recent strategy session, NexGen identified a number of areas that they could improve their warranty claims management.  
 
 ### Identified Pain-points
 Here are some of the current pain-points:
