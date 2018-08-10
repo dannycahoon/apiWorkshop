@@ -28,7 +28,7 @@ Here are some of the key aspects of the solution
   1. Connect to Service Cloud with a REST interface that reshapes the message and provides orchestration where necessary (Integration Cloud)
 1. Oracle API Platform Cloud (*Covered in this lab*)
   1. Create an API that interacts with a Microservice (we can initially use a mock-service that is created for us).
-    1. The microservice architectural style essentially takes a specific function and encapsulates it into one service.  For example in this case, s ServiceTicket is everything to do with creating, updating, querying a service ticket, but it does not do anything with things like customers, partners, parts, etc.  It maintains its own copy of data, even though the data is also in other systems.
+    1. The microservice architectural style essentially takes a specific function and encapsulates it into one service.  For example in this case, ServiceTicket is everything to do with creating, updating, querying a service ticket, but it does not do anything with things like customers, partners, parts, etc.  It maintains its own copy of data, even though the data is also in other systems.
   1. Link the API with the Integration Service.  Whenever a partner updates a service ticket, we can automatically carry that update over to other internal systems to update service requests as if the partner were a user of those internal systems.
 
 This series of learning paths and tutorials will primarily leverage the *API* portion of this scenario but to "see the big picture" here is an overview diagram of the use-case
