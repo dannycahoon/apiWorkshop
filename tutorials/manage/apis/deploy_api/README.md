@@ -45,6 +45,8 @@ There is no further action.  If it is in *Waiting* then it should transition to 
  
 ## Test the API (optional)
 Now that the API is deployed, you can invoke it in your favorite REST client.
+1.  You can locate the URL where your API is deployed by using the dropdown arrow to expand the Workshop_Gateway details and using the copy button next to 'OCI_Workshop_Gateway Node 1 ' to copy the URL.
+1.  Paste the URL into POSTMAN or other REST client.  Notice that no authentication or app keys are required because we have not yet configured any security policies.
 
 ## Re-deploy an API
 An API that has been deployed, can be re-deployed for example, when a change has been made.  There are multiple routes to perform this task depending on the role of the person logged in.
