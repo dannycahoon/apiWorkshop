@@ -4,7 +4,6 @@ APIs are made to be used by *API Consumers* and your *Application Developers* wi
 First you need to identify how you will invoke your API.  This is a combination of the API Specification, and the end-point, or URL where the API is deployed
 
 ## Before you begin
-- You have an API Platform environment.  See [environments](../../../../environments/README.md) for details on procuring an API Platform environment.
 - You have completed the tutorial [Designing an API](../../../design/design_api) (optional)
 - You have completed the tutorial [Creating an API Policy Implementation](../create_api)
 
