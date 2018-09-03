@@ -19,8 +19,8 @@ Tutorial | Skill Level | Prerequisite Tutorials
 [Create an API Policy Implementation](./manage/apis/create_api) | Learner | [Design an API](./design/design_api)
 [Deploy an API](./manage/apis/deploy_api) | Learner | [Create an API Policy Implementation](./manage/apis/create_api)
 [Invoke an API](./manage/apis/invoke_api) | Learner | [Deploy an API](./manage/apis/deploy_api)
-[Entitle an API to a Plan](./manage/apis/entitle_api) | Learner | [Create an API Policy Implementation](./manage/apis/create_api), [Create an API Plan](./manage/plans/create_plan)
 [Create an API Plan](./manage/plans/create_plan) | Learner | *None*
+[Entitle an API to a Plan](./manage/apis/entitle_api) | Learner | [Create an API Policy Implementation](./manage/apis/create_api), [Create an API Plan](./manage/plans/create_plan)
 [Create a Service](./manage/services/create_service) | Learner | *None*
 [Add a Method Mapping Policy](./manage/apis/policies/method_mapping) | Learner | [Create an API Policy Implementation](./manage/apis/create_api), [Create a Service](./manage/services/create_service)
 
