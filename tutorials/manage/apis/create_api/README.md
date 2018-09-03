@@ -63,7 +63,6 @@ To configure the service request, first, Hover over the Service Request policy, 
 You can either enter the URL directly, or reference an existing service.  If this is your first API, go ahead and just enter the URL directly.
 1. Policy Dialog, choose to enter a URL:
   1. Enter the Apiary Mock Service URL from [Designing an API](../../../design/design_api) in the back-end Service URL field.
-  1. Remove the “/tickets” from the mock-service URL so the API can be designed to call multiple end-points such as “/incidents”
 1. Leave the Service Account as None
 1. If your gateway is behind your corporate firewall, then you will need to make sure that the *Use Gateway Node Proxy* is checked.
 1. Click Apply.
