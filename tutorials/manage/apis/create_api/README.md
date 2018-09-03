@@ -30,7 +30,7 @@ Once your API is created, you will see it in the list of APIs.  Go ahead and cli
 On the API Specification tab (left-hand side), you can choose your API design that you created in Apiary during the [Designing an API](../../../design/design_api) lab.  
 
  
-#### Select and configuration implementation policies
+#### Select and configure implementation policies
 On the API Implementation tab (left-hand side), you will be presented with a request and a response pipeline.  Beginning with the request pipeline, you will see an *API Request* and a *Service Request*.  
 
  - The API Request is the location at which developers who consume your APIs will send their requests. This end-point resides on the gateway on which the API is deployed. You will deploy the API later.
