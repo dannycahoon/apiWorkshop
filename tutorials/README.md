@@ -21,10 +21,4 @@ Tutorial | Skill Level | Prerequisite Tutorials
 [Invoke an API](./manage/apis/invoke_api) | Learner | [Deploy an API](./manage/apis/deploy_api)
 [Create an API Plan](./manage/plans/create_plan) | Learner | *None*
 [Entitle an API to a Plan](./manage/apis/entitle_api) | Learner | [Create an API Policy Implementation](./manage/apis/create_api), [Create an API Plan](./manage/plans/create_plan)
-[Create a Service](./manage/services/create_service) | Learner | *None*
-[Add a Method Mapping Policy](./manage/apis/policies/method_mapping) | Learner | [Create an API Policy Implementation](./manage/apis/create_api), [Create a Service](./manage/services/create_service)
 
-### Gateway Management
-Tutorial | Skill Level | Prerequisite Tutorials
---- | --- | --- 
-[Grant Access to a Gateway](./manage/gateways/grants) | Learner | *None*
