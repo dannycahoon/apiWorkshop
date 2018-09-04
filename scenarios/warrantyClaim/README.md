@@ -40,11 +40,6 @@ Now that you understand NexGen's use-case above, here are the project requiremen
 ### Before you begin
 As you progress through this use-case, you will need to gain access to Oracle API Platform Cloud Service and Oracle Apiary Cloud Service.  At the point of the tutorial where you will need access, the tutorial will advise you.  
 
-### Choose your Environment
-If you are in an instructor-led event, your instructor may guide you on what environment you are using.  If you are accessing this on your own, you will need to make the choice.
-
-To learn more about the available environments, visit [API Platform Demo Environments](../../environments/README.md)
-
 >Note: Whenever there is a link, open it in a new tab (right-click->"Open Link in New Tab").  This way you will maintain your place this lab guide without having to re-orient yourself after completing a task from a linked tutorial, etc
 
 
